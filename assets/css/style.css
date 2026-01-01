@@ -13225,7 +13225,7 @@ Copyright (c) 2015 Daniel Eden
   position: relative;
   overflow: hidden;
   display: block;
-  z-index: 1;
+  z-index: 10;
   transition: 0.8s;
   font-weight: 600;
   min-width: max-content;
@@ -23478,4 +23478,97 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .bg-banner-bottom-marquree-content {
     padding: 12px 0;
+}
+
+.myTechSwiper {
+    overflow: hidden;
+}
+
+.myTechSwiper .swiper-slide {
+    width: 25%;
+    min-width: 25%;
+}
+
+@media (max-width: 1199px) {
+    .myTechSwiper .swiper-slide {
+        width: 50%;
+        min-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .myTechSwiper .swiper-slide {
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
+/* ===== FOOTER HEIGHT REDUCTION (AS-IS) ===== */
+
+/* Reduce main footer padding */
+.rts-footer-one {
+  padding-top: 20px !important;
+}
+
+/* Reduce container bottom spacing */
+.rts-footer-one .container {
+  padding-bottom: 0px !important;
+}
+
+/* Remove extra gaps under logo */
+.rts-footer-one .logo {
+  margin-bottom: 8px !important;
+}
+
+/* Reduce paragraph spacing */
+.rts-footer-one p.disc {
+  margin-bottom: 8px !important;
+  font-size: 14px;
+}
+
+/* Newsletter spacing */
+.footer-form {
+  margin-top: 6px !important;
+}
+
+/* Reduce spacing inside footer columns */
+.footer-wized-wrapper {
+  row-gap: 16px !important;
+}
+
+/* Footer column titles */
+.footer-wized-wrapper .single h6 {
+  font-size: 14px;
+  margin-bottom: 6px !important;
+}
+
+/* Footer links */
+.footer-wized-wrapper .single ul li {
+  margin-bottom: 4px !important;
+}
+
+.footer-wized-wrapper .single ul li a {
+  font-size: 13.5px;
+}
+
+/* Newsletter input & button text */
+.footer-form input,
+.footer-form button {
+  font-size: 14px;
+}
+
+/* Copyright area height */
+.copyright-area {
+  padding: 8px 0 !important;
+}
+
+/* Copyright text */
+.copyright-1 p,
+.copyright-1 ul li a {
+  font-size: 13px;
+}
+
+/* Remove extra margins */
+.copyright-1 p {
+  margin: 0 !important;
 }
