@@ -23572,3 +23572,32 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 .copyright-1 p {
   margin: 0 !important;
 }
+
+.rts-faq-area-start.rts-section-gap {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.rts-working-process-area.rts-section-gap {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* ===== SPACE BETWEEN FAQ & FOOTER ===== */
+
+/* Reduce FAQ section bottom gap */
+.rts-faq-area-start.rts-section-gap {
+  padding-bottom: 60px !important;   /* controls space BELOW FAQ */
+}
+
+/* Reduce excessive footer top padding */
+.rts-footer-one.pt--100 {
+  padding-top: 60px !important;      /* controls space ABOVE footer */
+}
+
+/* ===== SPACE BETWEEN WORKING PROCESS & CTA ===== */
+
+/* Add spacing ABOVE CTA section */
+.rts-cta-area {
+  margin-top: 80px;
+}
