@@ -23601,3 +23601,502 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 .rts-cta-area {
   margin-top: 80px;
 }
+
+.rts-service-area {
+  margin-top: 80px;
+}
+
+.rts-feature-work-area {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.our-working-process {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+/* Container - Removed Flip Logic */
+.flip-card {
+    background-color: transparent;
+    height: 220px; /* Reduced height */
+    max-width: 320px; /* Reduced width */
+    margin: 0 auto 20px auto; 
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Inner Container - Fixed position */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* Image Side Styling */
+.flip-card-front {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-front .thumbnail,
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay Text Styling - Glass effect visible only on hover */
+.flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darker tint like your image */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    pointer-events: none;
+    
+    /* Hover logic additions */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.4s ease; /* Smooth fade in */
+}
+
+/* Display overlay on hover */
+.flip-card:hover .flip-card-back {
+    opacity: 1;
+}
+
+.flip-card-back h3 {
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.flip-card-back p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Adjusting the bottom content area to match */
+.single-project-area-digital-agency .inner-content {
+    max-width: 320px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+/* Vertical Process Styling */
+.vertical-process-container {
+    position: relative;
+    padding-left: 50px;
+    margin-top: 20px;
+}
+
+/* The Main Vertical Line */
+.vertical-process-container::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: #e0e0e0; /* Default gray line */
+    transition: background 0.3s ease;
+}
+
+/* Individual Step Wrapper */
+.process-step {
+    position: relative;
+    margin-bottom: 50px;
+    transition: all 0.3s ease;
+}
+
+/* The Dot (Hollow Circle) */
+.process-step .dot {
+    position: absolute;
+    left: -50px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid #4A6CF7;
+    background: white;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.process-step:hover .dot {
+    background: #4A6CF7; /* Fills dot on hover */
+    transform: scale(1.2);
+}
+
+.process-step:hover .title {
+    color: #4A6CF7;
+    transform: translateX(10px);
+}
+
+.process-step .title {
+    transition: all 0.3s ease;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.process-step .disc {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+/* Right Side Image Styling */
+.process-image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease;
+}
+
+.process-image-wrapper:hover img {
+    transform: translateY(-20px);
+}
+
+.rts-working-process-area {
+  margin-bottom: 80px;
+}
+
+
+/* Equal height columns */
+.why-chooseus-area .row {
+    display: flex;
+    align-items: stretch;
+}
+
+/* Left content full height */
+.why-choose-left-content {
+    height: 100%;
+}
+
+/* Image wrapper */
+.why-choose-iamge-two {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+
+    /* 👇 Push images down to start from H2 */
+    margin-top: 28px;   /* adjust if needed */
+}
+
+/* Side-by-side equal height images */
+.why-choose-iamge-two img {
+    width: 50%;
+    height: 92%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.bg-gradient-one-industry {
+  margin-bottom: 80px;
+}
+
+
+/* Add space ABOVE Our Working Process section */
+.rts-working-process-area {
+    margin-top: 120px;   /* 🔥 creates space from previous section */
+}
+
+/*Working Process Animation Fix*/
+/* Layout & Spacing */
+.rts-working-process-area .row.g-5 {
+    display: flex;
+    align-items: stretch; 
+}
+
+.vertical-process-container {
+    position: relative;
+    padding-left: 50px;
+    height: 100%;
+}
+
+/* Static Gray Background Line */
+.vertical-process-container::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: #e0e0e0;
+    z-index: 1;
+}
+
+/* Animated Blue Line - Resetting to Blank at the Redirect */
+.active-animation .vertical-process-container::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    width: 2px;
+    background: #4A6CF7;
+    z-index: 2;
+    animation: lineProgressLoop 12s linear infinite; 
+}
+
+@keyframes lineProgressLoop {
+    0%, 5% { height: 0%; opacity: 0; }        /* Start COMPLETELY BLANK */
+    6% { opacity: 1; }                        /* Line begins appearing */
+    25% { height: 0%; }                       /* Wait at top */
+    40% { height: 33%; }                      /* Reach Point 1 to 2 */
+    60% { height: 66%; }                      /* Reach Point 2 to 3 */
+    80%, 95% { height: 100%; opacity: 1; }    /* Final hold - all points covered */
+    100% { height: 0%; opacity: 0; }          /* REDIRECT RESET: Everything Blank */
+}
+
+/* Dots Centered on the Line */
+.process-step .dot {
+    position: absolute;
+    left: 7px; /* Align with line left */
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid #4A6CF7;
+    background: white;
+    z-index: 4;
+    transform: translateX(-50%); /* Centers the 16px dot on the 2px line */
+}
+
+.process-step {
+    position: relative;
+    padding-bottom: 60px; /* Vertical Spacing like image */
+    z-index: 3;
+}
+
+.process-step:last-child {
+    padding-bottom: 0;
+}
+
+/* Text and Dot Reveal - Stays visible until reset */
+@keyframes revealAndHold {
+    0%, 10% { opacity: 0; transform: translateY(10px); }    /* Start COMPLETELY BLANK */
+    15%, 95% { opacity: 1; transform: translateY(0); }      /* Stay visible once reached */
+    100% { opacity: 0; transform: translateY(10px); }      /* REDIRECT RESET: Everything Blank */
+}
+
+@keyframes dotFillAndHold {
+    0%, 10% { background: white; transform: translateX(-50%) scale(1); }
+    15%, 95% { background: #4A6CF7; transform: translateX(-50%) scale(1.3); } 
+    100% { background: white; transform: translateX(-50%) scale(1); }
+}
+
+/* Apply animations only when active-animation is present */
+.active-animation .process-step .title, 
+.active-animation .process-step .disc, 
+.active-animation .process-step .dot {
+    opacity: 0;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+/* Sync Delays with Blue Line Progress */
+.active-animation .process-step:nth-child(1) .title, 
+.active-animation .process-step:nth-child(1) .disc, 
+.active-animation .process-step:nth-child(1) .dot { animation-name: revealAndHold; animation-delay: 0.5s; }
+.active-animation .process-step:nth-child(1) .dot { animation-name: dotFillAndHold; }
+
+.active-animation .process-step:nth-child(2) .title, 
+.active-animation .process-step:nth-child(2) .disc, 
+.active-animation .process-step:nth-child(2) .dot { animation-name: revealAndHold; animation-delay: 3s; }
+.active-animation .process-step:nth-child(2) .dot { animation-name: dotFillAndHold; }
+
+.active-animation .process-step:nth-child(3) .title, 
+.active-animation .process-step:nth-child(3) .disc, 
+.active-animation .process-step:nth-child(3) .dot { animation-name: revealAndHold; animation-delay: 5.5s; }
+.active-animation .process-step:nth-child(3) .dot { animation-name: dotFillAndHold; }
+
+.active-animation .process-step:nth-child(4) .title, 
+.active-animation .process-step:nth-child(4) .disc, 
+.active-animation .process-step:nth-child(4) .dot { animation-name: revealAndHold; animation-delay: 8s; }
+.active-animation .process-step:nth-child(4) .dot { animation-name: dotFillAndHold; }
+
+/* Existing Styling Maintenance */
+.process-step .title { font-size: 18px; font-weight: 500; margin-bottom: 5px; color: #1a1a1a; }
+.process-step .disc { font-size: 14px; color: #666; line-height: 1.4; }
+
+/* Image Styling */
+.process-image-wrapper { height: 100%; display: flex; }
+.process-image-wrapper img {
+    width: 100%; height: 100%; object-fit: cover; 
+    border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   Balanced spacing for Working Process steps
+========================================= */
+
+.rts-working-process-area .vertical-process-container .process-step {
+    margin-bottom: 28px;          /* controls gap between steps */
+    padding-bottom: 0;
+}
+
+.rts-working-process-area .vertical-process-container .content-wrapper {
+    padding-bottom: 6px;          /* small breathing space */
+}
+
+.rts-working-process-area .vertical-process-container .content-wrapper p {
+    margin-bottom: 6px;           /* prevents large text gaps */
+    line-height: 22px;
+}
+
+/* keep timeline aligned but not stretched */
+.rts-working-process-area .vertical-process-container::before {
+    top: 6px;
+    bottom: 6px;
+}
+
+.outer-box {
+    display: flex;
+    align-items: stretch;
+}
+
+/* =========================================
+   FINAL FIX: Case Study Spacing (Active + Inactive)
+========================================= */
+
+/* ---------- INACTIVE CASE STUDIES ---------- */
+.project-block-four:not(.active) {
+    flex: 0 0 110px !important;     /* compact width */
+    max-width: 110px !important;
+}
+
+/* Reduce inner spacing for inactive */
+.project-block-four:not(.active) .inner-box {
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+/* Tighten vertical title spacing */
+.project-block-four:not(.active) .title-column {
+    padding: 0 8px !important;
+    margin: 0 !important;
+}
+
+
+/* ---------- ACTIVE CASE STUDY ---------- */
+.project-block-four.active {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+}
+
+/* Remove unused side columns ONLY for active */
+.project-block-four.active .title-column:not(.active-title),
+.project-block-four.active .empty-column {
+    display: none !important;
+}
+
+/* Allow image + content to fully expand */
+.project-block-four.active .inner-box {
+    width: 100% !important;
+    display: flex;
+    gap: 32px; /* controlled spacing */
+}
+
+/* Content column expands fully */
+.project-block-four.active .content-column {
+    flex: 1 1 auto !important;
+    max-width: 100% !important;
+    padding-right: 0 !important;
+}
+
+
+
+/* =========================================
+   ACTUAL ROOT FIX: Remove fixed width from content-box
+========================================= */
+
+/* Kill hard-coded width on active case content */
+.project-block-four.active .content-box {
+    width: auto !important;
+    max-width: 100% !important;
+    flex: 1 1 auto !important;
+}
+
+/* Ensure parent allows expansion */
+.project-block-four.active .all-content {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+}
+
+/* Optional: control inner spacing cleanly */
+.project-block-four.active .content-box {
+    padding-right: 16px; /* adjust 12–20px if needed */
+}
+
+/* ===============================
+   REMOVE dropdown line & background
+   Desktop + Mobile (FINAL FIX)
+================================ */
+
+/* Desktop dropdown (About → Our Team) */
+.nav-area .submenu li a {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.nav-area .submenu li a:hover,
+.nav-area .submenu li a:focus,
+.nav-area .submenu li a.active {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--color-primary) !important;
+}
+
+/* Kill pseudo-elements causing lines */
+.nav-area .submenu li a::before,
+.nav-area .submenu li a::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+/* ===============================
+   Mobile menu (metismenu)
+================================ */
+
+.mobile-menu-main .metismenu li a {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.mobile-menu-main .metismenu li a:hover,
+.mobile-menu-main .metismenu li a:focus,
+.mobile-menu-main .metismenu li.mm-active > a {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Remove divider lines created by metismenu */
+.mobile-menu-main .metismenu li a::before,
+.mobile-menu-main .metismenu li a::after {
+  content: none !important;
+  display: none !important;
+}
