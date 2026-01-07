@@ -23621,7 +23621,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
     background-color: transparent;
     height: 220px; /* Reduced height */
     max-width: 320px; /* Reduced width */
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px auto; 
     position: relative;
     border-radius: 12px;
     overflow: hidden;
@@ -23666,7 +23666,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
     justify-content: center;
     padding: 20px;
     pointer-events: none;
-   
+    
     /* Hover logic additions */
     opacity: 0; /* Hidden by default */
     transition: opacity 0.4s ease; /* Smooth fade in */
@@ -23823,7 +23823,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 /* Layout & Spacing */
 .rts-working-process-area .row.g-5 {
     display: flex;
-    align-items: stretch;
+    align-items: stretch; 
 }
 
 .vertical-process-container {
@@ -23853,7 +23853,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
     width: 2px;
     background: #4A6CF7;
     z-index: 2;
-    animation: lineProgressLoop 12s linear infinite;
+    animation: lineProgressLoop 12s linear infinite; 
 }
 
 @keyframes lineProgressLoop {
@@ -23899,13 +23899,13 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 @keyframes dotFillAndHold {
     0%, 10% { background: white; transform: translateX(-50%) scale(1); }
-    15%, 95% { background: #4A6CF7; transform: translateX(-50%) scale(1.3); }
+    15%, 95% { background: #4A6CF7; transform: translateX(-50%) scale(1.3); } 
     100% { background: white; transform: translateX(-50%) scale(1); }
 }
 
 /* Apply animations only when active-animation is present */
-.active-animation .process-step .title,
-.active-animation .process-step .disc,
+.active-animation .process-step .title, 
+.active-animation .process-step .disc, 
 .active-animation .process-step .dot {
     opacity: 0;
     animation-duration: 12s;
@@ -23913,23 +23913,23 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 }
 
 /* Sync Delays with Blue Line Progress */
-.active-animation .process-step:nth-child(1) .title,
-.active-animation .process-step:nth-child(1) .disc,
+.active-animation .process-step:nth-child(1) .title, 
+.active-animation .process-step:nth-child(1) .disc, 
 .active-animation .process-step:nth-child(1) .dot { animation-name: revealAndHold; animation-delay: 0.5s; }
 .active-animation .process-step:nth-child(1) .dot { animation-name: dotFillAndHold; }
 
-.active-animation .process-step:nth-child(2) .title,
-.active-animation .process-step:nth-child(2) .disc,
+.active-animation .process-step:nth-child(2) .title, 
+.active-animation .process-step:nth-child(2) .disc, 
 .active-animation .process-step:nth-child(2) .dot { animation-name: revealAndHold; animation-delay: 3s; }
 .active-animation .process-step:nth-child(2) .dot { animation-name: dotFillAndHold; }
 
-.active-animation .process-step:nth-child(3) .title,
-.active-animation .process-step:nth-child(3) .disc,
+.active-animation .process-step:nth-child(3) .title, 
+.active-animation .process-step:nth-child(3) .disc, 
 .active-animation .process-step:nth-child(3) .dot { animation-name: revealAndHold; animation-delay: 5.5s; }
 .active-animation .process-step:nth-child(3) .dot { animation-name: dotFillAndHold; }
 
-.active-animation .process-step:nth-child(4) .title,
-.active-animation .process-step:nth-child(4) .disc,
+.active-animation .process-step:nth-child(4) .title, 
+.active-animation .process-step:nth-child(4) .disc, 
 .active-animation .process-step:nth-child(4) .dot { animation-name: revealAndHold; animation-delay: 8s; }
 .active-animation .process-step:nth-child(4) .dot { animation-name: dotFillAndHold; }
 
@@ -23940,7 +23940,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 /* Image Styling */
 .process-image-wrapper { height: 100%; display: flex; }
 .process-image-wrapper img {
-    width: 100%; height: 100%; object-fit: cover;
+    width: 100%; height: 100%; object-fit: cover; 
     border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
@@ -24100,8 +24100,3 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   content: none !important;
   display: none !important;
 }
-
-.job-opening-area .row.g-5 {
-    flex-direction: column;
-}
-
