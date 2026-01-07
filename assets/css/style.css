@@ -24022,6 +24022,8 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
     padding-right: 0 !important;
 }
 
+
+
 /* =========================================
    ACTUAL ROOT FIX: Remove fixed width from content-box
 ========================================= */
@@ -24044,126 +24046,87 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
     padding-right: 16px; /* adjust 12–20px if needed */
 }
 
-/* Layout & Spacing */
-.rts-working-process-area .row.g-5 {
-    display: flex;
-    align-items: stretch; 
+/* ===============================
+   REMOVE dropdown line & background
+   Desktop + Mobile (FINAL FIX)
+================================ */
+
+/* Desktop dropdown (About → Our Team) */
+.nav-area .submenu li a {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
 }
 
-.vertical-process-container {
-    position: relative;
-    padding-left: 50px;
-    height: 100%;
+.nav-area .submenu li a:hover,
+.nav-area .submenu li a:focus,
+.nav-area .submenu li a.active {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--color-primary) !important;
 }
 
-/* Static Gray Background Line */
-.vertical-process-container::before {
-    content: '';
-    position: absolute;
-    left: 7px;
-    top: 10px;
-    bottom: 10px;
-    width: 2px;
-    background: #e0e0e0;
-    z-index: 1;
+/* Kill pseudo-elements causing lines */
+.nav-area .submenu li a::before,
+.nav-area .submenu li a::after {
+  content: none !important;
+  display: none !important;
 }
 
-/* Animated Blue Line - Resetting to Blank at the Redirect */
-.active-animation .vertical-process-container::after {
-    content: '';
-    position: absolute;
-    left: 7px;
-    top: 10px;
-    width: 2px;
-    background: #4A6CF7;
-    z-index: 2;
-    animation: lineProgressLoop 12s linear infinite; 
+
+/* ===============================
+   Mobile menu (metismenu)
+================================ */
+
+.mobile-menu-main .metismenu li a {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
 }
 
-@keyframes lineProgressLoop {
-    0%, 5% { height: 0%; opacity: 0; }        /* Start COMPLETELY BLANK */
-    6% { opacity: 1; }                        /* Line begins appearing */
-    25% { height: 0%; }                       /* Wait at top */
-    40% { height: 33%; }                      /* Reach Point 1 to 2 */
-    60% { height: 66%; }                      /* Reach Point 2 to 3 */
-    80%, 95% { height: 100%; opacity: 1; }    /* Final hold - all points covered */
-    100% { height: 0%; opacity: 0; }          /* REDIRECT RESET: Everything Blank */
+.mobile-menu-main .metismenu li a:hover,
+.mobile-menu-main .metismenu li a:focus,
+.mobile-menu-main .metismenu li.mm-active > a {
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-/* Dots Centered on the Line */
-.process-step .dot {
-    position: absolute;
-    left: 7px; /* Align with line left */
-    top: 6px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: 3px solid #4A6CF7;
-    background: white;
-    z-index: 4;
-    transform: translateX(-50%); /* Centers the 16px dot on the 2px line */
+/* Remove divider lines created by metismenu */
+.mobile-menu-main .metismenu li a::before,
+.mobile-menu-main .metismenu li a::after {
+  content: none !important;
+  display: none !important;
 }
 
-.process-step {
-    position: relative;
-    padding-bottom: 60px; /* Vertical Spacing like image */
-    z-index: 3;
+/* =========================================
+   JOB OPENINGS SECTION: MOBILE FIXES */
+.job-opening-area .row.g-5 {
+    flex-direction: column;
 }
 
-.process-step:last-child {
-    padding-bottom: 0;
+.job-opening-area {
+    padding-top: 60px; /* adjust: 40–80px as needed */
 }
 
-/* Text and Dot Reveal - Stays visible until reset */
-@keyframes revealAndHold {
-    0%, 10% { opacity: 0; transform: translateY(10px); }    /* Start COMPLETELY BLANK */
-    15%, 95% { opacity: 1; transform: translateY(0); }      /* Stay visible once reached */
-    100% { opacity: 0; transform: translateY(10px); }      /* REDIRECT RESET: Everything Blank */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-@keyframes dotFillAndHold {
-    0%, 10% { background: white; transform: translateX(-50%) scale(1); }
-    15%, 95% { background: #4A6CF7; transform: translateX(-50%) scale(1.3); } 
-    100% { background: white; transform: translateX(-50%) scale(1); }
+.job-opening-area .container {
+    padding-left: 0;
+    padding-right: 0;
 }
 
-/* Apply animations only when active-animation is present */
-.active-animation .process-step .title, 
-.active-animation .process-step .disc, 
-.active-animation .process-step .dot {
-    opacity: 0;
-    animation-duration: 12s;
-    animation-iteration-count: infinite;
+.job-opening-area .row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
-/* Sync Delays with Blue Line Progress */
-.active-animation .process-step:nth-child(1) .title, 
-.active-animation .process-step:nth-child(1) .disc, 
-.active-animation .process-step:nth-child(1) .dot { animation-name: revealAndHold; animation-delay: 0.5s; }
-.active-animation .process-step:nth-child(1) .dot { animation-name: dotFillAndHold; }
-
-.active-animation .process-step:nth-child(2) .title, 
-.active-animation .process-step:nth-child(2) .disc, 
-.active-animation .process-step:nth-child(2) .dot { animation-name: revealAndHold; animation-delay: 3s; }
-.active-animation .process-step:nth-child(2) .dot { animation-name: dotFillAndHold; }
-
-.active-animation .process-step:nth-child(3) .title, 
-.active-animation .process-step:nth-child(3) .disc, 
-.active-animation .process-step:nth-child(3) .dot { animation-name: revealAndHold; animation-delay: 5.5s; }
-.active-animation .process-step:nth-child(3) .dot { animation-name: dotFillAndHold; }
-
-.active-animation .process-step:nth-child(4) .title, 
-.active-animation .process-step:nth-child(4) .disc, 
-.active-animation .process-step:nth-child(4) .dot { animation-name: revealAndHold; animation-delay: 8s; }
-.active-animation .process-step:nth-child(4) .dot { animation-name: dotFillAndHold; }
-
-/* Existing Styling Maintenance */
-.process-step .title { font-size: 18px; font-weight: 500; margin-bottom: 5px; color: #1a1a1a; }
-.process-step .disc { font-size: 14px; color: #666; line-height: 1.4; }
-
-/* Image Styling */
-.process-image-wrapper { height: 100%; display: flex; }
-.process-image-wrapper img {
-    width: 100%; height: 100%; object-fit: cover; 
-    border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+.single-job-opening-card {
+    width: 100%;
+    max-width: 100%;
 }
