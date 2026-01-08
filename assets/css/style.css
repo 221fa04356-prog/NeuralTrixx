@@ -24100,3 +24100,45 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   content: none !important;
   display: none !important;
 }
+
+.project-details-container {
+  max-width: 100%;
+}
+
+.project-details-content-wrapper {
+  width: 100%;
+}
+
+.project-details-content-wrapper .image-wrapper-top {
+  width: 90%;
+  justify-content: center;
+}
+
+.project-details-content-wrapper .image-wrapper-top img {
+  width: 90%;
+  max-width: 1120px; /* SAME visual width as CTA content */
+  border-radius: 16px;
+}
+
+/* ONLY Key Challenges & Solutions section */
+.project-details-content-area.pb--0 .image-wrapper-top {
+  justify-content: flex-start;   /* align image to left */
+}
+
+.project-details-content-area.pb--0 .image-wrapper-top .single {
+  max-width: 100%;              /* control image container size */
+}
+
+.project-details-content-area.pb--0 .image-wrapper-top img {
+  width: 100%;
+  height: auto;          /* natural height */
+  max-height: 420px;     /* prevents tall image */
+  object-fit: cover;
+  display: block;
+}
+
+
+
+
+
+
