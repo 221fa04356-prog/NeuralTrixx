@@ -24137,8 +24137,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   display: block;
 }
 
+.rts-career-banner-area {
+  padding-top: 30px !important;
+}
 
-
-
-
-
+.project-details-content-wrapper .disc {
+    text-align: justify;
+    hyphens: auto; /* Optional: helps avoid large gaps between words */
+}
