@@ -333,20 +333,24 @@
                             <h2 class="title rts-text-anime-style-1">Overview:</h2>
                         </div>
                         <p class="disc">
-                            We partnered with a major digital enterprise to architect a high-performance Webhook Automation Engine. By deploying a centralized listener and relay framework, we enabled the automated synchronization of data across disparate platforms—from CRM updates to payment triggers—ensuring that every system event initiates an immediate, pre-configured response without manual polling or batch processing.
-                        </p>
+                                We partnered with a highly integrated digital enterprise to implement a resilient Webhook Automation Engine designed to synchronize their entire tech stack in real-time. By transitioning from resource-heavy API polling to an event-driven architecture, we enabled instant communication between payment gateways, CRMs, and fulfillment systems without the lag or server overhead of constant checking.
+
+
+                        </p>                        
                         <p class="disc mb--30">
-                            <span>The Objective:</span> To transition from manual data entry to a fully reactive, asynchronous automation ecosystem. Our focus was on implementing intelligent request queuing, ensuring 100% data delivery through automated retry logic, and providing technical teams with a real-time dashboard for event monitoring and log verification.
+                            <span>The Objective:</span> To transition from a "pull-based" legacy model to a "push-based" real-time ecosystem. Our focus was on guaranteeing delivery through smart retry logic, securing endpoints with signature verification, and eliminating the wasted computational power associated with aggressive API polling.
+
+
                         </p>
 
                         
 
-                        <div class="image-wrapper-top">
-                            <div class="single">
-                                <img src="assets/images/project/08.webp" alt="Real-Time Webhook Monitoring Dashboard">
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
-                            <div class="single">
-                                <img src="assets/images/project/09.webp" alt="Event-Driven Automation Logic Flow">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
                         </div>
                     </div>
@@ -355,6 +359,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -363,37 +368,60 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Problem</span>
-                            <h2 class="title rts-text-anime-style-1">The Challenges</h2>
+                            <h2 class="title rts-text-anime-style-1">The Problem</h2>
                         </div>
                         <p class="disc">
-                            The client struggled with "Integration Silos" where critical events in one platform failed to trigger actions in another, leading to massive data discrepancies and delayed workflows. Fragmented API endpoints and a lack of standard payload handling resulted in high developer overhead, inconsistent system states, and significant revenue loss due to missed transactional triggers.
+                            Connecting disparate systems (like Shopify, Salesforce, and Slack) historically relied on inefficient scripts that constantly "polled" APIs asking for updates. This approach created significant latency, wasted server resources, and resulted in data synchronization delays. When critical events occurred, downstream systems often didn't find out until the next scheduled poll, slowing down business operations.
+
+
                         </p>
+                        <p class="disc mb--30">
+                            <span>Challenges:</span> The latency between an event occurring and the system reacting caused operational friction. Frequent polling triggered API rate limits, blocking critical data flow. Furthermore, without a robust management engine, failed webhooks (due to server blips) resulted in permanent data loss with no way to replay the event.
+
+
+                        </p>
+
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                        </div>
+
                         <div class="project-detials-problems-wrapper">
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>1</span>
-                                    <h5 class="title">Sync Latency & Lost Payloads</h5>
+                                    <h5 class="title">Resource-Intensive API Polling</h5>
                                 </div>
                                 <p class="disc">
-                                    Reliance on periodic polling led to a 15-minute lag in data updates, resulting in outdated customer information and a 20% increase in duplicate tasks across the sales and support teams.
-                                </p>
+                                    Traditional integration scripts constantly pinged external APIs to check for changes—often finding nothing. This "busy waiting" wasted massive amounts of bandwidth and CPU cycles. As transaction volumes grew, the frequency of these checks had to increase, eventually hitting rate limits and causing system-wide throttling.
+
+
+                                </p>                          
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>2</span>
-                                    <h5 class="title">Limited Error Handling Visibility</h5>
+                                    <h5 class="title">Data Synchronization Latency</h5>
                                 </div>
                                 <p class="disc">
-                                    Legacy systems offered no way to track failed webhook deliveries, leaving the technical team blind to dropped notifications until end-users reported critical system failures or missed orders.
-                                </p>
+                                    In a polling model, data is only as fresh as the last check. If a customer made a payment one second after a poll, the system wouldn't know until the next interval (often 10-15 minutes later). This delay prevented instant gratification actions, such as sending a welcome email or unlocking a digital product immediately upon purchase.
+
+
+                                </p>                            
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>3</span>
-                                    <h5 class="title">High Cost of Manual Scripting</h5>
+                                    <h5 class="title">Silent Failures & Data Loss</h5>
                                 </div>
                                 <p class="disc">
-                                    The absence of a unified engine forced developers to spend 60% of their sprints building custom listeners for every new integration, significantly slowing down the organizational digital transformation.
+                                    Webhooks are "fire and forget" by nature. If the receiving server was down for maintenance or experienced a momentary glitch when the event was sent, that data was lost forever. Without an orchestration engine to queue and retry these failed events, businesses suffered from "missing" orders and disjointed customer records.
+
+
                                 </p>
                             </div>
                         </div>
@@ -403,6 +431,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--0">
     <div class="container">
         <div class="project-details-container">
@@ -411,23 +440,27 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Solutions</span>
-                            <h2 class="title rts-text-anime-style-1">Strategic Orchestration Strategy</h2>
+                            <h2 class="title rts-text-anime-style-1">Event-Driven Integration Grid</h2>
                         </div>
                         <p class="disc">
                             <span>Strategic Execution:</span>
-                            We overcame the integration gap by deploying a centralized "Webhook Hub & Transformation Layer." By utilizing automated payload parsing and conditional logic triggers, we created a flow that automatically validates incoming data, reformats it for destination APIs, and ensures reliable delivery via an exponential backoff retry mechanism.
+                                We modernized the infrastructure by deploying a "Webhook Orchestration Layer." This system acts as a reliable courier, capturing events instantly, verifying their security signatures, and utilizing an "exponential back-off" strategy to automatically retry failed deliveries until they are successfully acknowledged by the receiving system.
+
+
                         </p>
 
                         
 
-                        <div class="image-wrapper-top mb--30">
-                            <div class="single">
-                                <img src="assets/images/project/10.webp" alt="Webhook Engine Implementation Roadmap">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center mb--30">
+                                <img src="assets/images/project/10.webp" alt="Automated Telecalling Implementation Roadmap" class="img-fluid" style="max-width:900px; width:100%; height:auto;">
                             </div>
                         </div>
                         <p class="disc">
                             <span>Results Achieved:</span>
-                            By synchronizing real-time system events with automated triggers, we achieved a 99.9% payload delivery rate and reduced system latency from minutes to milliseconds. This transformation allowed the client to maintain 100% data parity across their global tech stack.
+                                    The shift to event-driven architecture reduced server load by 85% by eliminating unnecessary polling. Data synchronization became instantaneous, ensuring real-time workflows. Most importantly, the smart retry mechanism achieved a 99.99% event delivery success rate, recovering thousands of potentially lost data points.
+
+
                         </p>
                     </div>
                 </div>
@@ -435,16 +468,19 @@
         </div>
     </div>
 </div>
+
 <div class="rts-call-to-action-area rts-section-gap">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="call-to-action-wrapper-three">
                     <h3 class="title rts-text-anime-style-1">
-                        Unify Your Systems. Automate in Real-Time. Professional.
+                    Sync Instantly. Scale Effortlessly. Professional.
                     </h3>
                     <p class="disc">
-                        Book a specialized Webhook Automation audit today to modernize your event-driven architecture and secure your data flows.
+                        Book a specialized Webhook Architecture audit today to eliminate polling lag, ensure data reliability, and connect your stack in real-time.
+
+
                     </p>
                     <a href="saas-auth-backend/public/login.html" class="rts-btn btn-primary">Get Started</a>
                 </div>
