@@ -8,7 +8,8 @@
 #page-loader {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at center, #0b0f1a, #000);
+  background: rgba(0, 0, 0, 0.35);  /* or fully transparent */
+  backdrop-filter: blur(2px);      /* optional: glass effect */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,3 +48,11 @@
   letter-spacing: 0.8px;
   opacity: 0.85;
 }
+
+#page-loader video {
+  width: 200px;
+  max-width: 70vw;
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(0,255,255,0.25);
+}
+
