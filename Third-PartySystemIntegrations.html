@@ -776,51 +776,47 @@
             <div class="col-lg-6">
                 <div class="vertical-process-container">
                     
-                    <div class="process-step">
-                        <div class="dot"></div>
-                        <div class="content-wrapper">
-                            <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
-                                <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">01.</span> System & API Assessment
-                            </h5>
-                            <p class="disc" style="font-size: 14px; color: #666;">
-                                Evaluate third-party platforms, APIs, data formats, and compatibility requirements.
-                            </p>
+                    <div class="timeline-vertical">
+                        <div class="timeline-bar"></div>
+                        <div class="timeline-step step-1">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">01.</span> System & API Assessment
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                    Evaluate third-party platforms, APIs, data formats, and compatibility requirements.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="process-step">
-                        <div class="dot"></div>
-                        <div class="content-wrapper">
-                            <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
-                                <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">02.</span> Secure Integration Setup
-                            </h5>
-                            <p class="disc" style="font-size: 14px; color: #666;">
-                                Configure authentication, authorization, and secure API connections using industry standards.
-                            </p>
+                        <div class="timeline-step step-2">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">02.</span> Secure Integration Setup
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                    Configure authentication, authorization, and secure API connections using industry standards.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="process-step">
-                        <div class="dot"></div>
-                        <div class="content-wrapper">
-                            <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
-                                <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">03.</span> Data Sync & Validation
-                            </h5>
-                            <p class="disc" style="font-size: 14px; color: #666;">
-                                Enable real-time or scheduled data exchange with validation and error-handling mechanisms.
-                            </p>
+                        <div class="timeline-step step-3">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">03.</span> Data Sync & Validation
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                    Enable real-time or scheduled data exchange with validation and error-handling mechanisms.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="process-step" style="margin-bottom: 0;">
-                        <div class="dot"></div>
-                        <div class="content-wrapper">
-                            <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
-                                <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">04.</span> Monitoring & Optimization
-                            </h5>
-                            <p class="disc" style="font-size: 14px; color: #666;">
-                                Monitor integration performance, logs, and automate updates for long-term reliability.
-                            </p>
+                        <div class="timeline-step step-4">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">04.</span> Monitoring & Optimization
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                    Monitor integration performance, logs, and automate updates for long-term reliability.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -829,7 +825,7 @@
 
             <div class="col-lg-6">
                 <div class="process-image-wrapper">
-                    <img src="assets/images/process/process-main.webp" alt="Process Main" style="max-width: 100%; height: auto; border-radius: 20px;">
+                    <img src="assets/images/process/process-main.webp" alt="Telephony Process" style="max-width: 100%; height: auto; border-radius: 20px;">
                 </div>
             </div>
         </div>
@@ -1434,63 +1430,67 @@
     <script defer src="assets/js/plugins/swiper.js"></script>
     <script defer src="assets/js/main.js"></script>
 
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const projects = document.querySelectorAll(".project-block-four");
-  let currentIndex = 0;
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const steps = document.querySelectorAll('.timeline-step');
+    const bar = document.querySelector('.timeline-bar');
+    const timeline = document.querySelector('.timeline-vertical');
+    const image = document.querySelector('.process-image-wrapper img');
 
-  function showProject(index) {
-    projects.forEach((item, i) => {
-      item.classList.toggle("active", i === index);
+    if (!steps.length || !bar || !timeline || !image) return;
+
+    // Reset
+    steps.forEach(step => step.classList.remove('active'));
+    bar.style.height = '0px';
+
+    function syncTimelineToImage() {
+        const imgHeight = image.offsetHeight;
+        timeline.style.height = imgHeight + 'px';
+        return imgHeight;
+    }
+
+    // Ensure image height is ready
+    const imageHeight = image.complete
+        ? syncTimelineToImage()
+        : (image.onload = () => syncTimelineToImage());
+
+    // Animation timing
+    const moveDuration = 1200;
+    const pauseDuration = 300;
+    let index = 0;
+
+    function animate() {
+        if (index >= steps.length) {
+            // FORCE line to reach bottom of image
+            bar.style.height = timeline.offsetHeight + 'px';
+            return;
+        }
+
+        const step = steps[index];
+        const stepCenter =
+            step.offsetTop + step.offsetHeight / 2;
+
+        bar.style.height = stepCenter + 'px';
+
+        setTimeout(() => {
+            step.classList.add('active');
+            setTimeout(() => {
+                index++;
+                animate();
+            }, pauseDuration);
+        }, moveDuration);
+    }
+
+    // Start animation AFTER layout settles
+    setTimeout(animate, 300);
+
+    // Re-sync on resize
+    window.addEventListener('resize', () => {
+        syncTimelineToImage();
+        bar.style.height = timeline.offsetHeight + 'px';
     });
-  }
-
-  // Initial state
-  showProject(currentIndex);
-
-  // OPTIONAL: keyboard navigation
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowRight") {
-      currentIndex = (currentIndex + 1) % projects.length;
-      showProject(currentIndex);
-    }
-    if (e.key === "ArrowLeft") {
-      currentIndex =
-        (currentIndex - 1 + projects.length) % projects.length;
-      showProject(currentIndex);
-    }
-  });
-
-  // Click on rotated titles
-  projects.forEach((project, index) => {
-    project
-      .querySelector(".content-rotate")
-      .addEventListener("click", () => {
-        currentIndex = index;
-        showProject(currentIndex);
-      });
-  });
 });
 </script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active-animation');
-                } else {
-                    // Remove to ensure it resets when scrolling back from first section
-                    entry.target.classList.remove('active-animation');
-                }
-            });
-        }, { threshold: 0.3 });
-
-        document.querySelectorAll('.animate-on-scroll').forEach(section => {
-            observer.observe(section);
-        });
-    });
-    </script>
 </body>
 
 </html>
