@@ -322,6 +322,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -333,20 +334,24 @@
                             <h2 class="title rts-text-anime-style-1">Overview:</h2>
                         </div>
                         <p class="disc">
-                            We partnered with a major enterprise to architect a high-performance API Gateway and Monitoring framework. By deploying a centralized entry point for all microservices, we enabled the automated enforcement of security policies, rate limiting, and request routing. This architecture ensures that every API call—from mobile apps to third-party integrations—is authenticated and monitored in real-time to maintain peak system performance.
-                        </p>
+                            We partnered with a microservices-driven enterprise to implement a centralized API Gateway & Monitoring framework designed to regain control over traffic management. By placing a smart proxy between clients and backend services, we unified authentication, routing, and observability, creating a single, secure entry point for all digital interactions.
+
+
+                        </p>                        
                         <p class="disc mb--30">
-                            <span>The Objective:</span> To transition from a fragmented network of endpoints to a unified, observable API ecosystem. Our focus was on implementing dynamic traffic shifting, ensuring 100% visibility through distributed tracing, and providing DevOps teams with a real-time dashboard for latency tracking and automated failure detection.
+                            <span>The Objective:</span> To transition from direct-to-service chaos to a managed, governable API landscape. Our focus was on offloading cross-cutting concerns (like SSL termination and throttling) from individual services, ensuring high availability through load balancing, and gaining deep visibility into latency and error rates.
+
+
                         </p>
 
                         
 
-                        <div class="image-wrapper-top">
-                            <div class="single">
-                                <img src="assets/images/project/08.webp" alt="Real-Time API Traffic & Latency Dashboard">
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
-                            <div class="single">
-                                <img src="assets/images/project/09.webp" alt="Distributed Tracing & Error Monitoring Flow">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
                         </div>
                     </div>
@@ -355,6 +360,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -363,37 +369,60 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Problem</span>
-                            <h2 class="title rts-text-anime-style-1">The Challenges</h2>
+                            <h2 class="title rts-text-anime-style-1">The Problem</h2>
                         </div>
                         <p class="disc">
-                            The client struggled with "Endpoint Chaos" where disparate services had inconsistent security and zero centralized monitoring. This lack of oversight led to silent service failures, untraceable latency bottlenecks, and a significant risk of DDoS attacks due to the absence of global rate limiting across their distributed infrastructure.
+                            As the number of microservices exploded, managing security, routing, and monitoring for each one individually became a maintenance nightmare. Clients had to know the specific IP addresses of backend services, creating tight coupling. Without a central gatekeeper, a spike in traffic to one service could cascade and bring down the entire system.
+
+
                         </p>
+                        <p class="disc mb--30">
+                            <span>Challenges:</span> The lack of a unified entry point meant that authentication logic had to be duplicated across every service, leading to inconsistencies and security holes. Troubleshooting was difficult because logs were scattered. Furthermore, managing version changes (e.g., v1 to v2) required coordinating updates with every single client application, slowing down releases.
+
+
+                        </p>
+
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                        </div>
+
                         <div class="project-detials-problems-wrapper">
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>1</span>
-                                    <h5 class="title">Observability Gaps & Latency Spikes</h5>
+                                    <h5 class="title">Security & Auth Duplication</h5>
                                 </div>
                                 <p class="disc">
-                                    Lack of centralized monitoring meant that performance degradation in a single microservice went unnoticed until it caused a cascading failure, resulting in significant system downtime and user churn.
-                                </p>
+                                    When every microservice handles its own authentication, the risk of implementation errors increases. If one service forgot to validate a token, the entire system was compromised. This decentralized approach also made it difficult to enforce global security policies, such as rotating API keys or implementing IP whitelisting instantly during an attack.
+
+
+                                </p>                          
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>2</span>
-                                    <h5 class="title">Inconsistent Security Enforcement</h5>
+                                    <h5 class="title">Traffic Spikes & Cascading Failures</h5>
                                 </div>
                                 <p class="disc">
-                                    Fragmented authentication protocols across different teams left 10% of endpoints vulnerable to unauthorized access, making it impossible to audit global API security posture effectively.
-                                </p>
+                                    Without a gateway to enforce rate limiting and circuit breaking, a sudden surge in requests (from a marketing push or a bot) could overwhelm backend databases. This pressure would cause one service to fail, which would then cause dependent services to fail, leading to a "domino effect" outage across the entire platform.
+
+
+                                </p>                            
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>3</span>
-                                    <h5 class="title">High Cost of Manual Troubleshooting</h5>
+                                    <h5 class="title">Blind Spots in Performance</h5>
                                 </div>
                                 <p class="disc">
-                                    The absence of distributed tracing forced engineers to spend 60% of their time manually correlating logs from multiple servers to identify the root cause of a single failed request.
+                                    Without a central monitoring layer, the team couldn't see the "golden signals" (latency, traffic, errors) for the platform as a whole. They didn't know which specific endpoint was slow or which client was generating the most errors until users started complaining. This lack of visibility made performance tuning a guessing game.
+
+
                                 </p>
                             </div>
                         </div>
@@ -403,6 +432,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--0">
     <div class="container">
         <div class="project-details-container">
@@ -411,23 +441,27 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Solutions</span>
-                            <h2 class="title rts-text-anime-style-1">Intelligent Traffic Orchestration</h2>
+                            <h2 class="title rts-text-anime-style-1">Intelligent Traffic Control</h2>
                         </div>
                         <p class="disc">
                             <span>Strategic Execution:</span>
-                            We overcame the visibility gap by deploying a centralized "API Management & Monitoring Layer." By utilizing automated circuit breakers and real-time telemetry hooks, we created a self-healing flow that automatically detects service timeouts and reroutes traffic or applies throttling with zero manual intervention.
+                                We stabilized the platform by deploying a "Cloud-Native API Gateway." This infrastructure handles all incoming traffic, performing SSL termination, request routing, and authentication at the edge. We integrated distributed tracing to visualize the entire request lifecycle, allowing instant identification of bottlenecks.
+
+
                         </p>
 
                         
 
-                        <div class="image-wrapper-top mb--30">
-                            <div class="single">
-                                <img src="assets/images/project/10.webp" alt="API Gateway Implementation Roadmap">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center mb--30">
+                                <img src="assets/images/project/10.webp" alt="Automated Telecalling Implementation Roadmap" class="img-fluid" style="max-width:900px; width:100%; height:auto;">
                             </div>
                         </div>
                         <p class="disc">
                             <span>Results Achieved:</span>
-                            By synchronizing real-time traffic data with automated health triggers, we achieved a 99.99% API availability rate and reduced the Mean Time to Recovery (MTTR) by 70%. This transformation enabled the client to scale their global microservices with total operational clarity.
+                                The implementation reduced backend complexity by 40% by offloading common tasks to the gateway. System uptime improved to 99.99% thanks to automated circuit breaking and load balancing. Additionally, the unified monitoring dashboard reduced the time to diagnose performance issues from hours to minutes.
+
+
                         </p>
                     </div>
                 </div>
@@ -435,16 +469,19 @@
         </div>
     </div>
 </div>
+
 <div class="rts-call-to-action-area rts-section-gap">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="call-to-action-wrapper-three">
                     <h3 class="title rts-text-anime-style-1">
-                        Unify Your Traffic. Secure Your Infrastructure. Professional.
+                    Route Efficiently. Monitor Visually. Professional.
                     </h3>
                     <p class="disc">
-                        Book a specialized API Gateway audit today to automate your monitoring and secure your service network.
+                            Book a specialized API Gateway audit today to centralize your traffic management, secure your endpoints, and gain total system visibility.
+
+
                     </p>
                     <a href="saas-auth-backend/public/login.html" class="rts-btn btn-primary">Get Started</a>
                 </div>

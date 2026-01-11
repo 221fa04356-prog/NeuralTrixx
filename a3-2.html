@@ -322,6 +322,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -333,20 +334,20 @@
                             <h2 class="title rts-text-anime-style-1">Overview:</h2>
                         </div>
                         <p class="disc">
-                            We partnered with a major SaaS provider to architect a comprehensive Subscription Life-cycle Management framework. By deploying an intelligent billing engine, we enabled the automated management of trial conversions, tier upgrades, recurring renewals, and complex pro-rata adjustments, ensuring that the entire subscriber journey—from sign-up to retention—is friction-less and revenue-optimized.
+                            We partnered with a leading SaaS provider to implement a comprehensive Subscription Engine designed to secure and scale recurring revenue. By transitioning from manual invoicing to an automated recurring billing infrastructure, we eliminated revenue leakage and empowered customers with self-service capabilities to manage their own plan lifecycles seamlessly.                        
                         </p>
-                        <p class="disc mb--30">
-                            <span>The Objective:</span> To transition from manual invoice chasing to a fully automated recurring revenue ecosystem. Our focus was on implementing smart dunning logic to recover failed payments, ensuring 100% accurate revenue recognition, and providing growth teams with a real-time dashboard for MRR (Monthly Recurring Revenue) and Churn analytics.
+                            <p class="disc mb--30">
+                            <span>The Objective:</span> To transition from ad-hoc billing to a predictable, automated revenue model. Our focus was on handling complex billing logic—such as proration and multi-currency support—automating tax compliance, and reducing involuntary churn through intelligent payment retries.
                         </p>
 
                         
 
-                        <div class="image-wrapper-top">
-                            <div class="single">
-                                <img src="assets/images/project/08.webp" alt="Subscription Churn & Retention Analytics Dashboard">
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
-                            <div class="single">
-                                <img src="assets/images/project/09.webp" alt="Automated Dunning & Payment Recovery Logic">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
                         </div>
                     </div>
@@ -355,6 +356,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -363,37 +365,50 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Problem</span>
-                            <h2 class="title rts-text-anime-style-1">The Challenges</h2>
+                            <h2 class="title rts-text-anime-style-1">The Problem</h2>
                         </div>
                         <p class="disc">
-                            The client struggled with "Involuntary Churn" where valid subscribers were lost due to expired credit cards and failed retry logic. Fragmented billing data across localized regions led to high revenue leakage, inconsistent taxation compliance, and a significant loss of long-term customer lifetime value (LTV).
+                            Managing recurring revenue streams manually or through disjointed tools created an operational nightmare as the subscriber base grew. Tracking renewal dates, calculating pro-rated charges for mid-cycle upgrades, and chasing failed payments consumed vast amounts of administrative time. This friction led to billing errors, frustrated customers, and significant revenue slipping through the cracks.
                         </p>
+                        <p class="disc mb--30">
+                            <span>Challenges:</span> The inability to handle dynamic billing scenarios (like upgrades or pauses) caused customer dissatisfaction. High rates of involuntary churn occurred simply because there was no system to retry failed cards automatically. Furthermore, manual revenue recognition made financial forecasting and reporting inaccurate and labor-intensive.
+                        </p>
+
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                        </div>
+
                         <div class="project-detials-problems-wrapper">
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>1</span>
-                                    <h5 class="title">Renewal Latency & Payment Failures</h5>
+                                    <h5 class="title">Revenue Leakage & Manual Invoicing</h5>
                                 </div>
                                 <p class="disc">
-                                    Lack of smart retry logic caused 15% of renewals to fail on the first attempt, resulting in immediate service cancellation and a surge in support tickets from frustrated users.
+                                    Relying on spreadsheets or manual triggers to send invoices meant that renewals were often missed or sent late. This lack of automation resulted in "revenue leakage," where services were provided but not billed on time. Additionally, manual calculations for taxes and discounts introduced human error, leading to disputes and chargebacks.                            
                                 </p>
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>2</span>
-                                    <h5 class="title">Limited Expansion Visibility</h5>
+                                    <h5 class="title">High Involuntary Churn</h5>
                                 </div>
                                 <p class="disc">
-                                    Legacy systems could not automate "seat-based" or "usage-based" upgrades, forcing the sales team to manually calculate pro-rata billing, which led to significant delays in account expansion.
+                                    A large portion of customer churn wasn't due to dissatisfaction, but rather payment failures—expired cards or temporary banking issues. Without an automated "dunning" system to gracefully retry payments and notify customers to update their details, these subscribers were simply cut off, resulting in lost Lifetime Value (LTV).                            
                                 </p>
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>3</span>
-                                    <h5 class="title">High Cost of Manual Retention</h5>
+                                    <h5 class="title">Rigid Plan Management</h5>
                                 </div>
                                 <p class="disc">
-                                    The absence of automated win-back triggers meant the marketing team was blind to users showing early signs of churn, missing the window to offer targeted incentives to stay.
+                                    Customers today expect the flexibility to upgrade, downgrade, or pause their subscriptions instantly. Handling these requests manually required complex proration calculations (e.g., charging for 10 days of Plan A and 20 days of Plan B). The inability to do this automatically forced customers to cancel entirely rather than adjust their plans.
                                 </p>
                             </div>
                         </div>
@@ -403,6 +418,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--0">
     <div class="container">
         <div class="project-details-container">
@@ -411,42 +427,41 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Solutions</span>
-                            <h2 class="title rts-text-anime-style-1">Intelligent Growth Strategy</h2>
+                            <h2 class="title rts-text-anime-style-1">Recurring Revenue Command Center</h2>
                         </div>
                         <p class="disc">
                             <span>Strategic Execution:</span>
-                            We overcame the revenue leakage by deploying a centralized "Subscription Orchestration Layer." By utilizing automated credit card vaulting and event-driven webhooks, we created a self-healing billing flow that automatically updates expired cards and triggers personalized retention emails before a subscription lapses.
+                                We stabilized the revenue stream by deploying an "Automated Subscription Lifecycle Engine." This system handles the entire subscriber journey—from trial to renewal—automatically calculating proration for upgrades, managing global tax compliance, and utilizing smart retry logic to recover failed payments without human intervention.
                         </p>
 
-                        
-
-                        <div class="image-wrapper-top mb--30">
-                            <div class="single">
-                                <img src="assets/images/project/10.webp" alt="Subscription Lifecycle Implementation Roadmap">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center mb--30">
+                                <img src="assets/images/project/10.webp" alt="Automated Telecalling Implementation Roadmap" class="img-fluid" style="max-width:900px; width:100%; height:auto;">
                             </div>
                         </div>
                         <p class="disc">
                             <span>Results Achieved:</span>
-                            By synchronizing real-time billing data with retention triggers, we achieved a 25% reduction in involuntary churn and recovered $500k in annual recurring revenue. This transformation allowed the client to focus on product scaling with a stable, automated revenue base.
-                        </p>
+                            The automation of the billing lifecycle reduced administrative overhead by 90% and recovered 15% of previously lost revenue through smart dunning features. By offering a flexible self-service portal, the client reduced voluntary churn and increased average customer lifetime value significantly.  
+                        </p>                  
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="rts-call-to-action-area rts-section-gap">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="call-to-action-wrapper-three">
                     <h3 class="title rts-text-anime-style-1">
-                        Maximize Retention. Automate Billing. Professional.
+                    Automate Billing. Predict Revenue. Professional.
                     </h3>
                     <p class="disc">
-                        Book a specialized Subscription Life-cycle audit today to automate your growth and secure your MRR.
-                    </p>
-                    <a href="saas-auth-backend/public/login.html" class="rts-btn btn-primary">Get Started</a>
+                        Book a specialized Subscription Economy audit today to stop revenue leakage, automate your billing, and maximize customer lifetime value.       
+                    </p>             
+                        <a href="saas-auth-backend/public/login.html" class="rts-btn btn-primary">Get Started</a>
                 </div>
             </div>
         </div>

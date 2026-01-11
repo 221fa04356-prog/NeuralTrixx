@@ -322,6 +322,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -333,20 +334,27 @@
                             <h2 class="title rts-text-anime-style-1">Overview:</h2>
                         </div>
                         <p class="disc">
-                            We partnered with a major global enterprise to architect a seamless Single Sign-On (SSO) ecosystem. By deploying a centralized Identity Provider (IdP) supporting SAML 2.0 and OpenID Connect, we enabled employees to access the entire suite of corporate applications—from ERP to cloud storage—with a single set of credentials, eliminating password fatigue and strengthening the organization's overall security posture.
-                        </p>
+                                We partnered with a distributed enterprise to implement a seamless Single Sign-On (SSO)
+                                 Integration designed to unify access across their entire digital ecosystem. By connecting
+                                  disparate applications (SaaS, internal tools, and cloud infrastructure) to a centralized 
+                                  Identity Provider (IdP), we enabled employees to access all their work tools with a single
+                                   set of secure credentials.
+                        </p>                        
                         <p class="disc mb--30">
-                            <span>The Objective:</span> To transition from fragmented, application-specific logins to a unified authentication gateway. Our focus was on implementing adaptive MFA (Multi-Factor Authentication), ensuring 100% synchronization with Active Directory, and providing IT departments with a centralized command center for real-time user session management and security audits.
+                            <span>The Objective:</span> To transition from fragmented, siloed logins to a frictionless, 
+                            one-click access experience. Our focus was on eliminating password fatigue, strengthening 
+                            security postures through centralized policy enforcement, and drastically reducing the 
+                            administrative burden on IT support teams.
                         </p>
 
                         
 
-                        <div class="image-wrapper-top">
-                            <div class="single">
-                                <img src="assets/images/project/08.webp" alt="Centralized Access Management Dashboard">
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
-                            <div class="single">
-                                <img src="assets/images/project/09.webp" alt="SSO Protocol & Token Exchange Logic">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
                         </div>
                     </div>
@@ -355,6 +363,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -363,37 +372,59 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Problem</span>
-                            <h2 class="title rts-text-anime-style-1">The Challenges</h2>
+                            <h2 class="title rts-text-anime-style-1">The Problem</h2>
                         </div>
                         <p class="disc">
-                            The client faced extreme "Credential Exhaustion" where employees managed over 15 different passwords, leading to frequent lockouts and security risks. Fragmented user data across departments led to massive security gaps, high Help Desk costs for password resets, and a significant risk of unauthorized access due to weak, reused passwords.
+                            As the company adopted more SaaS tools, employees were forced to juggle dozens of unique usernames and passwords. 
+                            This "Credential Sprawl" led to significant productivity losses as users wasted time logging in and resetting 
+                            forgotten passwords. Security was compromised as frustrated users resorted to reusing weak passwords or writing 
+                            them down on sticky notes.
                         </p>
+                        <p class="disc mb--30">
+                            <span>Challenges:</span> The friction of multiple logins disrupted workflows and encouraged "Shadow IT," where 
+                            employees used unauthorized, easier-to-access tools. IT teams were overwhelmed by a constant stream of password 
+                            reset tickets. Furthermore, revoking access for departing employees was a manual, error-prone process, leaving 
+                            gaps for data theft.
+                        </p>
+
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                        </div>
+
                         <div class="project-detials-problems-wrapper">
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>1</span>
-                                    <h5 class="title">Authentication Friction & Latency</h5>
+                                    <h5 class="title">IT Support Overload</h5>
                                 </div>
                                 <p class="disc">
-                                    Legacy login systems were disconnected, resulting in employees losing an average of 15 minutes daily navigating different login screens, which compromised institutional productivity and user adoption of new tools.
-                                </p>
+                                    A staggering percentage of IT helpdesk tickets were solely for password resets and account unlocks. This high volume of low-value support requests drained technical resources, preventing the IT team from working on strategic initiatives and increasing operational costs significantly.
+
+                                </p>                          
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>2</span>
-                                    <h5 class="title">Security & Visibility Blindspots</h5>
+                                    <h5 class="title">Password Fatigue & Security Risks</h5>
                                 </div>
                                 <p class="disc">
-                                    Lack of centralized logging meant the security team could not track user activity across different cloud platforms, making it impossible to detect credential theft or account takeovers in real-time.
-                                </p>
+                                    requiring users to remember unique, complex passwords for 20+ different applications resulted in inevitable security shortcuts. Employees frequently reused the same password across personal and professional accounts, meaning a breach in a minor third-party app could compromise critical corporate infrastructure.
+
+                                </p>                            
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>3</span>
-                                    <h5 class="title">Manual Offboarding Overhead</h5>
+                                    <h5 class="title">Inefficient Offboarding & Access Gaps</h5>
                                 </div>
                                 <p class="disc">
-                                    The absence of automated de-provisioning forced IT to manually revoke access to every individual app when an employee left, often resulting in "orphan accounts" that remained active and vulnerable for weeks.
+                                    When an employee left the company, IT administrators had to manually log into every single application to revoke access. This decentralized process often resulted in missed accounts, allowing former employees to retain access to sensitive company data long after their termination—a major compliance violation.
+
                                 </p>
                             </div>
                         </div>
@@ -403,6 +434,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--0">
     <div class="container">
         <div class="project-details-container">
@@ -411,23 +443,25 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Solutions</span>
-                            <h2 class="title rts-text-anime-style-1">Strategic Identity Implementation</h2>
+                            <h2 class="title rts-text-anime-style-1">Federated Identity Mesh</h2>
                         </div>
                         <p class="disc">
                             <span>Strategic Execution:</span>
-                            We overcame the access gap by deploying a centralized "Identity Orchestration Layer." By utilizing automated SCIM provisioning and adaptive risk-based authentication triggers, we created a secure environment where access is granted based on user context (location, device, and network), ensuring a high-security perimeter with zero user friction.
+                                We streamlined access by deploying a "Unified Access Fabric" using industry-standard protocols like SAML 2.0 and OIDC. This architecture centralizes authentication, allowing the enterprise to enforce Multi-Factor Authentication (MFA) once at the gateway and grant secure, one-click access to all downstream applications.
+
                         </p>
 
                         
 
-                        <div class="image-wrapper-top mb--30">
-                            <div class="single">
-                                <img src="assets/images/project/10.webp" alt="SSO Implementation Architecture Roadmap">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center mb--30">
+                                <img src="assets/images/project/10.webp" alt="Automated Telecalling Implementation Roadmap" class="img-fluid" style="max-width:900px; width:100%; height:auto;">
                             </div>
                         </div>
                         <p class="disc">
                             <span>Results Achieved:</span>
-                            By synchronizing enterprise-wide credentials with SSO triggers, we achieved a 90% reduction in password-related support tickets and ensured 100% compliance with corporate security policies. This transformation allowed the client to scale their digital workforce with total identity confidence.
+                            The SSO implementation reduced the volume of password-related helpdesk tickets by 80%, saving hundreds of IT hours annually. Employee productivity surged as login friction was eliminated, and the "offboarding gap" was closed completely, ensuring instant, one-click revocation of all access rights.
+
                         </p>
                     </div>
                 </div>
@@ -435,16 +469,18 @@
         </div>
     </div>
 </div>
+
 <div class="rts-call-to-action-area rts-section-gap">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="call-to-action-wrapper-three">
                     <h3 class="title rts-text-anime-style-1">
-                        One Identity. Total Security. Professional.
+                    One Click. Total Control. Professional.
                     </h3>
                     <p class="disc">
-                        Book a specialized SSO audit today to unify your access management and secure your digital borders.
+                    Book a specialized SSO Architecture audit today to eliminate password fatigue, slash IT support costs, and secure your enterprise access.
+                    
                     </p>
                     <a href="saas-auth-backend/public/login.html" class="rts-btn btn-primary">Get Started</a>
                 </div>

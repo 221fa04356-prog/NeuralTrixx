@@ -333,20 +333,24 @@
                             <h2 class="title rts-text-anime-style-1">Overview:</h2>
                         </div>
                         <p class="disc">
-                            We partnered with a major multi-national enterprise to architect a high-performance GraphQL Orchestration framework. By deploying a federated gateway, we enabled the automated unification of multiple microservices into a single, cohesive graph. This allowed frontend teams to fetch complex, nested data across disparate databases with a single request, ensuring sub-second response times and eliminating the overhead of managing dozens of individual REST endpoints.
-                        </p>
+                            We partnered with a content-rich digital platform to implement a highly efficient GraphQL Orchestration framework designed to solve the data fetching inefficiencies of traditional REST APIs. By transitioning to a flexible schema, we empowered frontend teams to request exactly the data they need in a single query, eliminating over-fetching and drastically improving mobile performance.
+
+
+                        </p>                        
                         <p class="disc mb--30">
-                            <span>The Objective:</span> To transition from rigid, over-fetching REST architectures to an agile, consumer-driven data layer. Our focus was on implementing schema stitching and Apollo Federation, ensuring 100% type safety across the stack, and providing engineering leadership with a real-time dashboard for query performance and field-level usage analytics.
+                            <span>The Objective:</span> To transition from rigid, multiple-endpoint fetching to a unified, flexible data graph. Our focus was on aggregating data from disparate microservices into a single API layer, reducing network overhead for mobile users, and enabling rapid frontend iteration without waiting for backend changes.
+
+
                         </p>
 
                         
 
-                        <div class="image-wrapper-top">
-                            <div class="single">
-                                <img src="assets/images/project/08.webp" alt="GraphQL Query Performance & Schema Health Dashboard">
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
-                            <div class="single">
-                                <img src="assets/images/project/09.webp" alt="Automated Schema Merging & Field Resolver Logic">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
                         </div>
                     </div>
@@ -355,6 +359,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -363,37 +368,60 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Problem</span>
-                            <h2 class="title rts-text-anime-style-1">The Challenges</h2>
+                            <h2 class="title rts-text-anime-style-1">The Problem</h2>
                         </div>
                         <p class="disc">
-                            The client struggled with "Under-fetching and Over-fetching" in their legacy REST environment, where mobile apps had to make up to 10 sequential API calls to render a single screen. This fragmentation led to massive network latency, inconsistent data states across frontend components, and a significant slowdown in developer velocity due to the "N+1" query problem occurring at the client level.
+                            As the application interface became more complex, populating a single screen (like a User Dashboard) required calling five or six different REST endpoints. This "N+1 problem" resulted in slow loading times, excessive battery drain on mobile devices, and wasted bandwidth. Backend teams were constantly bogged down creating custom endpoints for every new UI tweak.
+
+
                         </p>
+                        <p class="disc mb--30">
+                            <span>Challenges:</span> The "Over-fetching" issue meant that mobile apps were downloading massive JSON files just to display a user's first name. Conversely, "Under-fetching" forced the app to make multiple round trips to get related data. This chatty network behavior killed performance on 4G networks and frustrated users with "loading spinners."
+
+
+                        </p>
+
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                        </div>
+
                         <div class="project-detials-problems-wrapper">
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>1</span>
-                                    <h5 class="title">Network Latency & Round-trip Bloat</h5>
+                                    <h5 class="title">Network Latency & Mobile Performance</h5>
                                 </div>
                                 <p class="disc">
-                                    Sequential REST calls caused a 2-second delay in initial page loads, resulting in high bounce rates and a poor user experience for international users on low-bandwidth connections.
-                                </p>
+                                    On mobile networks, every HTTP request adds significant latency. A dashboard requiring 10 separate API calls to load could take seconds to render, even if the data payload was small. This poor performance directly correlated with higher bounce rates and lower user engagement, specifically in regions with slower internet speeds.
+
+
+                                </p>                          
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>2</span>
-                                    <h5 class="title">Limited Schema Visibility</h5>
+                                    <h5 class="title">Backend Bottlenecks</h5>
                                 </div>
                                 <p class="disc">
-                                    Without a central graph, backend teams were blind to which API fields were actually being used, leading to the maintenance of "zombie" endpoints and high infrastructure costs for unused data processing.
-                                </p>
+                                    Frontend developers were blocked whenever they needed a new field added to an API response. They had to file a ticket with the backend team, wait for the sprint cycle, and wait for deployment. This dependency slowed down product iteration cycles significantly, preventing the business from A/B testing new features quickly.
+
+
+                                </p>                            
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>3</span>
-                                    <h5 class="title">High Cost of Frontend Data Integration</h5>
+                                    <h5 class="title">Data Redundancy (Over-fetching)</h5>
                                 </div>
                                 <p class="disc">
-                                    The absence of a unified gateway forced frontend developers to spend 50% of their time writing complex data-stitching logic in the browser instead of building user-facing features.
+                                    Traditional REST endpoints return a fixed structure. If a mobile view only needed a product's "Title" and "Price," the API would still send the "Description," "Reviews," "Specs," and "History." This massive waste of bandwidth increased cloud egress costs and slowed down the parsing time on the user's device.
+
+
                                 </p>
                             </div>
                         </div>
@@ -403,6 +431,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--0">
     <div class="container">
         <div class="project-details-container">
@@ -411,23 +440,27 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Solutions</span>
-                            <h2 class="title rts-text-anime-style-1">Intelligent Data Orchestration</h2>
+                            <h2 class="title rts-text-anime-style-1">Unified Data Graph</h2>
                         </div>
                         <p class="disc">
                             <span>Strategic Execution:</span>
-                            We overcame the integration gap by deploying a centralized "GraphQL Orchestration & Federation Layer." By utilizing automated data loaders and intelligent query plan caching, we created a flow that automatically optimizes backend requests, fetching only the specific fields requested by the client in a single parallelized execution with zero manual intervention.
+                                We optimized the data layer by deploying a "Federated GraphQL Gateway." This middleware sits in front of existing microservices, allowing clients to query for specific fields across multiple sources in a single request. We implemented persistent queries and server-side caching to ensure lightning-fast response times.
+
+
                         </p>
 
                         
 
-                        <div class="image-wrapper-top mb--30">
-                            <div class="single">
-                                <img src="assets/images/project/10.webp" alt="GraphQL Federation Implementation Roadmap">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center mb--30">
+                                <img src="assets/images/project/10.webp" alt="Automated Telecalling Implementation Roadmap" class="img-fluid" style="max-width:900px; width:100%; height:auto;">
                             </div>
                         </div>
                         <p class="disc">
                             <span>Results Achieved:</span>
-                            By synchronizing disparate microservices into a unified graph, we achieved a 70% reduction in average page load times and improved developer velocity by 45%. This transformation allowed the client to deliver high-performance digital experiences with total architectural flexibility.
+                                The shift to GraphQL reduced the number of network requests per screen load by 80% and decreased the average payload size by 65%. This optimization cut mobile load times in half, while the decoupled architecture allowed frontend teams to ship new features 2x faster without backend blockers.
+
+
                         </p>
                     </div>
                 </div>
@@ -435,16 +468,19 @@
         </div>
     </div>
 </div>
+
 <div class="rts-call-to-action-area rts-section-gap">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="call-to-action-wrapper-three">
                     <h3 class="title rts-text-anime-style-1">
-                        Unify Your APIs. Power Your Frontend. Professional.
+                    Query Smarter. Load Faster. Professional.
                     </h3>
                     <p class="disc">
-                        Book a specialized GraphQL Orchestration audit today to modernize your data layer and unlock sub-second performance.
+                            Book a specialized GraphQL Architecture audit today to optimize your data fetching, speed up your mobile apps, and unblock your frontend teams.
+
+
                     </p>
                     <a href="saas-auth-backend/public/login.html" class="rts-btn btn-primary">Get Started</a>
                 </div>

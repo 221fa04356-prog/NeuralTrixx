@@ -322,6 +322,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -332,21 +333,22 @@
                             <span class="pre">About</span>
                             <h2 class="title rts-text-anime-style-1">Overview:</h2>
                         </div>
-                        <p class="disc">
-                            We partnered with a major multi-national enterprise to architect a high-performance Identity and Access Management (IAM) framework. By deploying a centralized Zero-Trust engine, we enabled automated user provisioning, Single Sign-On (SSO), and adaptive Multi-Factor Authentication (MFA) across the entire corporate network, ensuring that every access request—from internal employees to third-party vendors—is verified, authorized, and logged in real-time.
-                        </p>
-                        <p class="disc mb--30">
-                            <span>The Objective:</span> To transition from fragmented, legacy login systems to a unified, secure identity ecosystem. Our focus was on implementing Role-Based Access Control (RBAC), ensuring 100% compliance with global data privacy standards, and providing IT security teams with a real-time dashboard for threat detection and automated account de-provisioning.
-                        </p>
+                            <p class="disc">
+                                We partnered with a security-conscious enterprise to implement a rigid Identity Access Control (IAM) framework designed to enforce Zero Trust principles. By transitioning to a Role-Based Access Control (RBAC) model, we ensured that employees and systems only have access to the specific data required for their role, eliminating internal threats and unauthorized exposure.
+                            </p>                        
+                            <p class="disc mb--30">
+                                <span>The Objective:</span> To transition from "permissive by default" to "least privilege" security. Our focus was on centralizing identity management, automating user provisioning, and securing sensitive endpoints against credential theft and unauthorized lateral movement within the network.
+                            </p>
+                            
 
                         
 
-                        <div class="image-wrapper-top">
-                            <div class="single">
-                                <img src="assets/images/project/08.webp" alt="IAM Governance & Audit Dashboard">
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
-                            <div class="single">
-                                <img src="assets/images/project/09.webp" alt="Automated User Provisioning Logic">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
                         </div>
                     </div>
@@ -355,6 +357,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -363,37 +366,49 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Problem</span>
-                            <h2 class="title rts-text-anime-style-1">The Challenges</h2>
+                            <h2 class="title rts-text-anime-style-1">The Problem</h2>
                         </div>
                         <p class="disc">
-                            The client struggled with "Access Sprawl" where manual permission granting led to high security risks and "orphan accounts" belonging to former employees. Fragmented identity data across local and cloud servers led to massive visibility gaps, inconsistent MFA enforcement, and a significant risk of lateral movement attacks in the event of a credential breach.
+                            As the organization grew, managing who had access to what became a chaotic mix of spreadsheets and ad-hoc permissions. Without a centralized control plane, sensitive data was left exposed to employees who didn't need it, and former employees often retained access long after leaving the company, creating massive security vulnerabilities.
+                        <p class="disc mb--30">
+                            <span>Challenges:</span> The lack of granular control meant that a single compromised credential could grant an attacker keys to the entire kingdom. IT teams were overwhelmed by manual password reset requests and permission changes. Furthermore, the inability to track "who accessed what and when" made compliance with regulations like GDPR and HIPAA impossible.
                         </p>
+
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                        </div>
+
                         <div class="project-detials-problems-wrapper">
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>1</span>
-                                    <h5 class="title">Provisioning Latency & Over-Privileging</h5>
+                                    <h5 class="title">Security Breaches & Credential Theft</h5>
                                 </div>
                                 <p class="disc">
-                                    Lack of automated workflows caused new hires to wait days for system access, while existing users often retained high-level permissions they no longer required, creating a massive internal security vulnerability.
+                                    Reliance on weak, static passwords and shared accounts made the organization an easy target for phishing and credential stuffing attacks. Once an attacker bypassed the perimeter, the lack of internal segmentation allowed them to move laterally across the network undetected, escalating privileges and stealing sensitive intellectual property.                            
                                 </p>
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>2</span>
-                                    <h5 class="title">Weak Authentication Visibility</h5>
+                                    <h5 class="title">Inefficient Onboarding & Offboarding</h5>
                                 </div>
                                 <p class="disc">
-                                    Legacy systems could not track suspicious login patterns in real-time, leaving the security team blind to potential brute-force attacks or unauthorized access from high-risk geographic regions.
+                                    Manually provisioning accounts for new hires took days, slowing down productivity. Even worse, the "offboarding gap"—where terminated employees retained access to email and databases because IT forgot to revoke a specific permission—posed a severe risk of data leakage and malicious sabotage.
                                 </p>
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>3</span>
-                                    <h5 class="title">High Cost of Manual Audits</h5>
+                                    <h5 class="title">Compliance & Audit Failures</h5>
                                 </div>
                                 <p class="disc">
-                                    The absence of centralized logging forced the compliance team to spend 60% of their time manually gathering evidence for SOC2 and ISO 27001 audits instead of focusing on proactive threat hunting.
+                                    Regulatory bodies demand strict logs of access to sensitive customer data. The fragmented nature of the legacy systems meant there was no unified audit trail. During audits, the inability to prove exactly which user accessed specific files resulted in failed assessments and the threat of heavy fines.                            
                                 </p>
                             </div>
                         </div>
@@ -403,6 +418,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--0">
     <div class="container">
         <div class="project-details-container">
@@ -411,41 +427,41 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Solutions</span>
-                            <h2 class="title rts-text-anime-style-1">Unified Identity Strategy</h2>
+                            <h2 class="title rts-text-anime-style-1">Zero Trust Identity Architecture</h2>
                         </div>
                         <p class="disc">
                             <span>Strategic Execution:</span>
-                            We overcame the security gap by deploying a centralized "Identity Orchestration Layer." By utilizing SCIM (System for Cross-domain Identity Management) and event-driven API hooks, we created a self-service flow that automatically provisions resources based on the user's HR status and applies context-aware MFA triggers with zero manual intervention.
+                                We secured the digital perimeter by deploying a "Centralized Identity Governance Engine." This system enforces Multi-Factor Authentication (MFA) across all endpoints and utilizes dynamic RBAC policies to automatically grant or revoke access based on the user’s current role, location, and device security status.
                         </p>
-
                         
 
-                        <div class="image-wrapper-top mb--30">
-                            <div class="single">
-                                <img src="assets/images/project/10.webp" alt="IAM Implementation Roadmap">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center mb--30">
+                                <img src="assets/images/project/10.webp" alt="Automated Telecalling Implementation Roadmap" class="img-fluid" style="max-width:900px; width:100%; height:auto;">
                             </div>
                         </div>
                         <p class="disc">
                             <span>Results Achieved:</span>
-                            By synchronizing real-time HR data with access triggers, we achieved a 95% reduction in account provisioning time and eliminated 100% of orphan accounts within the first month. This transformation enabled the client to achieve a "Never Trust, Always Verify" posture with total operational confidence.
-                        </p>
+                            The implementation blocked 100% of unauthorized access attempts and reduced the time required for user onboarding/offboarding from 3 days to 30 minutes. By enforcing strict access governance, the client passed their ISO 27001 audit with zero non-conformities. 
+                        </p>                   
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="rts-call-to-action-area rts-section-gap">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="call-to-action-wrapper-three">
                     <h3 class="title rts-text-anime-style-1">
-                        Secure Your Perimeter. Automate Access. Professional.
+                    Verify Identity. Secure Access. Professional.
                     </h3>
                     <p class="disc">
-                        Book a specialized Identity Access audit today to automate your security flows and protect your critical assets.
-                    </p>
+                    Book a specialized Identity Security audit today to close your security gaps, automate user access, and enforce Zero Trust across your enterprise.
+                                  </p>
                     <a href="saas-auth-backend/public/login.html" class="rts-btn btn-primary">Get Started</a>
                 </div>
             </div>
