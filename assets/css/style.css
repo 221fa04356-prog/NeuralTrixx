@@ -24145,3 +24145,154 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
     text-align: justify;
     hyphens: auto; /* Optional: helps avoid large gaps between words */
 }
+
+/* ================================
+   HARD RESET – REMOVE THEME LINES
+================================ */
+
+.vertical-process-container::before,
+.vertical-process-container::after,
+.timeline-vertical::before,
+.timeline-vertical::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+}
+
+.vertical-process-container,
+.timeline-vertical {
+    border: none !important;
+    border-left: none !important;
+    background: transparent !important;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.vertical-process-container {
+    position: relative;
+    padding-left: 0;
+}
+
+.timeline-vertical {
+    position: relative;
+    padding-left: 60px; /* space for blue line */
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* ================================
+   BLUE TIMELINE LINE
+================================ */
+
+.timeline-bar {
+    position: absolute;
+    left: 28px;
+    top: 0;
+    width: 3px;
+    height: 0;                 /* JS will set this */
+    background: #4A6CF7;
+    border-radius: 2px;
+}
+
+
+
+
+/* ================================
+   TIMELINE STEPS
+================================ */
+
+.timeline-step {
+    position: relative;
+    margin-bottom: 0;
+    background: transparent !important;
+}
+
+.timeline-step:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ================================
+   STEP CONTENT (TEXT ONLY)
+================================ */
+
+.timeline-step .process-step-content {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0;
+}
+
+
+/* ================================
+   TYPOGRAPHY
+================================ */
+
+.timeline-step h5.title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.timeline-step p.disc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0;
+}
+
+
+/* ================================
+   RESPONSIVE FIX
+================================ */
+
+@media (max-width: 991px) {
+    .timeline-vertical {
+        padding-left: 48px;
+    }
+
+    .timeline-bar {
+        left: 16px;
+    }
+}
+/* RESTORE TEXT ANIMATION */
+.timeline-step {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.timeline-step.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Force both columns to match height */
+.row.align-items-center {
+    align-items: stretch !important;
+}
+
+/* Make timeline fill full column height */
+.vertical-process-container,
+.timeline-vertical {
+    height: 100%;
+}
+
+/* Blue line fills entire text column */
+.timeline-bar {
+    top: 0;
+    height: 100%;
+    width: 3px;
+}
+
+.timeline-bar {
+    transition: height 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: height;
+}
