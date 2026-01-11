@@ -338,12 +338,16 @@
                         <p class="disc">
                             This case study focuses on designing a modular REST API architecture that enabled
                             faster integrations, cleaner service boundaries, and reliable communication
-                            across distributed systems.
+                            across distributed systems. The architecture was designed to support independent
+                            service development, reduce interdependencies, and improve long-term scalability
+                            while maintaining consistent API standards.
                         </p>
 
                         <p class="disc mb--30">
                             <span>Challenges:</span> Existing APIs were tightly coupled, difficult to scale,
                             and costly to maintain as new services and integrations were introduced.
+                            Inconsistent design patterns and limited flexibility made updates risky and
+                            slowed overall development velocity.
                         </p>
 
                         <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
@@ -378,11 +382,15 @@
                         <p class="disc">
                             The existing API layer lacked a clear structure, making integrations slow,
                             error-prone, and difficult to scale as system complexity increased.
+                            Developers faced challenges understanding dependencies, which increased
+                            onboarding time and introduced frequent integration issues.
                         </p>
 
                         <p class="disc mb--30">
                             <span>Challenges:</span> Tight coupling between services, inconsistent endpoints,
                             and limited documentation reduced development speed and system reliability.
+                            Minor changes often caused cascading failures, increasing testing effort
+                            and operational risk.
                         </p>
 
                         <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
@@ -402,7 +410,8 @@
                                     <h5 class="title">Tightly Coupled Services</h5>
                                 </div>
                                 <p class="disc">
-                                    Changes in one service frequently impacted multiple dependent systems.
+                                    Changes in one service frequently impacted multiple dependent systems,
+                                    making releases risky and increasing regression issues across the platform.
                                 </p>
                             </div>
 
@@ -412,7 +421,8 @@
                                     <h5 class="title">Slow Integrations</h5>
                                 </div>
                                 <p class="disc">
-                                    Onboarding new integrations required significant rework and coordination.
+                                    Onboarding new integrations required significant rework and coordination,
+                                    delaying feature delivery and increasing dependency between teams.
                                 </p>
                             </div>
 
@@ -422,7 +432,8 @@
                                     <h5 class="title">Maintenance Overhead</h5>
                                 </div>
                                 <p class="disc">
-                                    Inconsistent API patterns increased debugging time and long-term maintenance costs.
+                                    Inconsistent API patterns increased debugging time and long-term maintenance costs,
+                                    making the system harder to evolve as requirements changed.
                                 </p>
                             </div>
 
@@ -451,6 +462,8 @@
                             <span>Challenges Faced During the Case Study:</span>
                             The primary challenge was designing an API structure flexible enough to support
                             future services while maintaining clear contracts and stability.
+                            The solution needed to allow independent service evolution without breaking
+                            existing integrations or increasing operational complexity.
                         </p>
 
                         <div class="row">
@@ -463,8 +476,8 @@
                             <span>Solutions Implemented:</span>
                             A modular REST API architecture was implemented with well-defined endpoints,
                             consistent naming conventions, versioning strategies, and clear documentation.
-                            This enabled faster integrations, improved maintainability, and seamless
-                            service-to-service communication.
+                            This enabled faster integrations, improved maintainability, reduced service
+                            dependencies, and ensured reliable service-to-service communication at scale.
                         </p>
 
                     </div>
@@ -474,6 +487,7 @@
     </div>
 </div>
 <!-- project-details-content-area end -->
+
 
 
     <!-- rts call to action area start -->
