@@ -5403,7 +5403,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .rts-section-gapBottom {
-  padding-bottom: 120px;
+  padding-bottom: 80px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rts-section-gapBottom {
@@ -5417,7 +5417,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .rts-section-gapTop {
-  padding-top: 120px;
+  padding-top: 60px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rts-section-gapTop {
@@ -24145,3 +24145,19 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
     text-align: justify;
     hyphens: auto; /* Optional: helps avoid large gaps between words */
 }
+
+.rts-feature-area.rts-section-gapBottom {
+    padding-bottom: 5px !important;
+}
+
+/* Reduce gap above & below Technologies section */
+.rts-facilities-area.rts-section-gap {
+    padding-top: 30px !important;
+    padding-bottom: 100px !important;
+}
+
+/* Reduce space above Services section */
+.rts-service-area-four.rts-section-gap {
+    padding-top: 80px !important;
+}
+
