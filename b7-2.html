@@ -263,7 +263,7 @@
                         <li><i class="fa fa-chevron-right"></i></li>
                         <li><a href="#" class="active">Details</a></li>
                     </ul>
-                    <h1 class="title rts-text-anime-style-1">Dynamic Tenant Isolation:SaaS Security</h1>
+                    <h1 class="title rts-text-anime-style-1">Dynamic Tenant Isolation:<br>SaaS Security</h1>
                 </div>
             </div>
         </div>
@@ -333,20 +333,24 @@
                             <h2 class="title rts-text-anime-style-1">Overview:</h2>
                         </div>
                         <p class="disc">
-                            We partnered with a top-tier cloud enterprise to architect a "Zero-Trust" Dynamic Tenant Isolation framework. By deploying a robust security orchestration layer, we enabled the automated creation of logical boundaries between client environments. This ensure that every tenant's data, compute resources, and network traffic are strictly isolated in real-time, preventing cross-tenant access and lateral movement threats.
-                        </p>
+                            We partnered with a high-compliance SaaS platform to implement a Dynamic Tenant Isolation framework designed to guarantee zero data leakage. By transitioning from a "soft" software-based separation to a rigid, policy-driven isolation architecture, we ensured that every tenant’s data remains hermetically sealed—even within a shared infrastructure—protecting against both external attacks and internal configuration errors.
+
+
+                        </p>                        
                         <p class="disc mb--30">
-                            <span>The Objective:</span> To move beyond static security rules to a dynamic, automated isolation ecosystem. Our focus was on enforcing 100% cryptographic data separation, ensuring real-time threat detection within tenant perimeters, and providing security teams with a centralized dashboard for global compliance monitoring.
+                            <span>The Objective:</span> To transition from "trust-based" security to "proof-based" isolation. Our focus was on preventing Cross-Tenant Data Leakage (the #1 SaaS vulnerability), automating security policies that adapt to each client's tier, and providing enterprise customers with "Bring Your Own Key" (BYOK) encryption capabilities.
+
+
                         </p>
-                        
+
                         
 
-                        <div class="image-wrapper-top">
-                            <div class="single">
-                                <img src="assets/images/project/08.webp" alt="SaaS Security Isolation Dashboard">
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
-                            <div class="single">
-                                <img src="assets/images/project/09.webp" alt="Dynamic Cryptographic Key Management Flow">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
                         </div>
                     </div>
@@ -355,6 +359,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -363,37 +368,60 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Problem</span>
-                            <h2 class="title rts-text-anime-style-1">The Challenges</h2>
+                            <h2 class="title rts-text-anime-style-1">The Problem</h2>
                         </div>
                         <p class="disc">
-                            The client faced significant "Noisy Neighbor" issues and security vulnerabilities where a breach in one tenant environment could potentially expose the data of others. Manual security configuration led to slow provisioning, inconsistent policy enforcement, and critical gaps in audit trails for enterprise-grade compliance.
+                            The platform relied on simple "WHERE tenant_id = X" clauses in their code to separate customer data. This "Logic-Based" security is fragile; a single developer forgetting that clause in a new query could expose Bank A’s financial records to Bank B. This fragility terrified enterprise prospects and failed third-party security audits, blocking the company's move upmarket.
+
+
                         </p>
+                        <p class="disc mb--30">
+                            <span>Challenges:</span> The "Bleed-Over" risk meant that a bug in the application layer could bypass security controls entirely. Managing custom security requirements for different clients (e.g., some wanting shared DBs, others wanting dedicated ones) created a tangled mess of spaghetti code. Furthermore, if one tenant was compromised, the shared nature of the database put everyone else at risk.
+
+
+                        </p>
+
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                        </div>
+
                         <div class="project-detials-problems-wrapper">
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>1</span>
-                                    <h5 class="title">Security Latency & Manual Perimeters</h5>
+                                    <h5 class="title">The "Developer Error" Vulnerability</h5>
                                 </div>
                                 <p class="disc">
-                                    Manually configuring firewalls and IAM roles for new tenants led to frequent human errors, resulting in misconfigurations that compromised the platform's multi-tenant integrity and trust.
-                                </p>
+                                    Relying on application code to enforce security is a ticking time bomb. If a junior engineer wrote a query that missed the tenant filter, the application would silently return data belonging to other customers. This type of leak is often invisible until a customer reports seeing someone else's files, resulting in catastrophic reputational damage.
+
+
+                                </p>                          
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>2</span>
-                                    <h5 class="title">Weak Data Leakage Prevention</h5>
+                                    <h5 class="title">The Compliance Ceiling</h5>
                                 </div>
                                 <p class="disc">
-                                    Lack of automated row-level encryption and logical database separation meant that a single SQL injection vulnerability could theoretically access a broad spectrum of cross-tenant data.
-                                </p>
+                                    Enterprise clients in finance and healthcare demand more than just logical separation; they require physical or cryptographic proof that their data is isolated. The existing shared-everything architecture could not meet these strict standards (SOC2, HIPAA), effectively capping the company's growth and forcing them to reject high-value contracts.
+
+
+                                </p>                            
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>3</span>
-                                    <h5 class="title">Inefficient Audit Overhead</h5>
+                                    <h5 class="title">The "Blast Radius" Problem</h5>
                                 </div>
                                 <p class="disc">
-                                    The absence of automated isolation verification forced compliance officers to spend 60% of their time on manual evidence gathering for SOC2 and HIPAA certifications instead of strategic risk management.
+                                    In a commingled environment, a SQL injection attack against one tenant could theoretically be used to dump the entire database. The lack of strict boundaries meant that a security breach for a small, low-security client could escalate into a platform-wide compromise, affecting the platform's most sensitive enterprise partners.
+
+
                                 </p>
                             </div>
                         </div>
@@ -403,6 +431,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--0">
     <div class="container">
         <div class="project-details-container">
@@ -411,23 +440,27 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Solutions</span>
-                            <h2 class="title rts-text-anime-style-1">Strategic Security Orchestration</h2>
+                            <h2 class="title rts-text-anime-style-1">Zero-Trust Isolation Shield</h2>
                         </div>
                         <p class="disc">
                             <span>Strategic Execution:</span>
-                            We overcame the technical security gaps by deploying an "Identity-Aware Isolation Layer." By utilizing Dynamic Policy Generation and automated VPC (Virtual Private Cloud) peering triggers, we ensured that every tenant is automatically "jailed" within their own secure environment upon signup, with zero possibility of cross-talk.
+                                We fortified the platform by deploying a "Row-Level Security (RLS) & Policy Engine." We moved security down to the database level, meaning the database itself rejects any query that tries to cross tenant boundaries, regardless of application code. We also implemented "Virtual Private Vaults" allowing premium tenants to hold their own encryption keys.
+
+
                         </p>
-                        
+
                         
 
-                        <div class="image-wrapper-top mb--30">
-                            <div class="single">
-                                <img src="assets/images/project/10.webp" alt="Dynamic Isolation Implementation Roadmap">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center mb--30">
+                                <img src="assets/images/project/10.webp" alt="Automated Telecalling Implementation Roadmap" class="img-fluid" style="max-width:900px; width:100%; height:auto;">
                             </div>
                         </div>
                         <p class="disc">
                             <span>Results Achieved:</span>
-                            By automating tenant perimeters, we achieved 100% successful logical isolation audits and reduced the technical security overhead by 80%. This transformation allowed the client to offer "High-Security" tiering to regulated industries with total confidence in their multi-tenant architecture.
+                                    The implementation eliminated 100% of cross-tenant data leak vectors, as verified by external penetration testing. The shift to verifiable isolation reduced the sales cycle for enterprise deals by 40% by passing security questionnaires instantly. Additionally, the "Blast Radius" was contained, ensuring that a compromise of one tenant could never spread to another.
+
+
                         </p>
                     </div>
                 </div>
@@ -435,16 +468,19 @@
         </div>
     </div>
 </div>
+
 <div class="rts-call-to-action-area rts-section-gap">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="call-to-action-wrapper-three">
                     <h3 class="title rts-text-anime-style-1">
-                        Secure Every Tenant. Scale with Confidence. Professional.
+                    Isolate Completely. Trust No One. Professional.
                     </h3>
                     <p class="disc">
-                        Book a specialized Tenant Isolation audit today to harden your infrastructure and meet the world's strictest security standards.
+                        Book a specialized SaaS Security audit today to lock down your data, pass your audits, and win enterprise trust.
+
+
                     </p>
                     <a href="saas-auth-backend/public/login.html" class="rts-btn btn-primary">Get Started</a>
                 </div>

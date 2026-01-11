@@ -189,6 +189,29 @@
       blurOverlay.style.display = "none";
     }
   }
+  /* ==========================
+   Windows + Shift + S BLUR
+========================== */
+
+/* Blur immediately when Windows key is pressed */
+document.addEventListener("keydown", e => {
+  if (e.metaKey) {   // Windows key
+    enableBlur();
+  }
+}, true);
+
+/* Extra safety: explicit Win + Shift + S */
+document.addEventListener("keydown", e => {
+  if (e.metaKey && e.shiftKey && e.key.toLowerCase() === "s") {
+    enableBlur();
+  }
+}, true);
+
+/* Remove blur after keys are released */
+document.addEventListener("keyup", () => {
+  setTimeout(disableBlur, 800);
+}, true);
+
 
   /* Windows: PrintScreen */
   document.addEventListener("keyup", e => {

@@ -322,6 +322,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -333,20 +334,25 @@
                             <h2 class="title rts-text-anime-style-1">Overview:</h2>
                         </div>
                         <p class="disc">
-                            We partnered with a major multi-national enterprise to architect a high-performance User Authentication API framework. By deploying a centralized identity layer based on OAuth 2.0 and OpenID Connect protocols, we enabled secure Single Sign-On (SSO), social logins, and biometric authentication across their entire application ecosystem, ensuring that every user entry point is fortified against unauthorized access while maintaining a friction-less login experience.
-                        </p>
-                        <p class="disc mb--30">
-                            <span>The Objective:</span> To transition from legacy, hard-coded authentication to a cloud-native, modular API ecosystem. Our focus was on implementing adaptive Multi-Factor Authentication (MFA), ensuring 100% compliance with GDPR and SOC2 data privacy standards, and providing developer teams with a real-time dashboard for session management and security audits.
+                                We partnered with a consumer-facing digital platform to implement a robust User 
+                                Authentication API framework designed to balance military-grade security with frictionless 
+                                user entry. By transitioning from vulnerable, home-grown login systems to industry-standard 
+                                authentication protocols (OAuth2, OpenID Connect), we protected user data while making the 
+                                sign-up and login process instantaneous and seamless.                        
+                                <p class="disc mb--30">
+                            <span>The Objective:</span> To transition from high-friction, password-heavy entry points to a 
+                            secure, modern identity layer. Our focus was on eliminating password fatigue through social logins, 
+                            protecting against credential stuffing attacks, and reducing the drop-off rate at the registration stage.
                         </p>
 
                         
 
-                        <div class="image-wrapper-top">
-                            <div class="single">
-                                <img src="assets/images/project/08.webp" alt="Identity Access & Security Analytics Dashboard">
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
-                            <div class="single">
-                                <img src="assets/images/project/09.webp" alt="Automated MFA & Token Validation Logic">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
                         </div>
                     </div>
@@ -355,6 +361,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -363,37 +370,61 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Problem</span>
-                            <h2 class="title rts-text-anime-style-1">The Challenges</h2>
+                            <h2 class="title rts-text-anime-style-1">The Problem</h2>
                         </div>
                         <p class="disc">
-                            The client struggled with "Identity Fragmentation" where separate databases for different apps led to security vulnerabilities and poor user retention. Manual password reset flows and a lack of modern encryption standards resulted in high support ticket volumes, inconsistent security posture, and a significant risk of credential-stuffing attacks.
+                            Building and maintaining custom authentication systems created a massive security liability 
+                            and operational burden. Developers spent valuable cycles patching vulnerabilities and managing 
+                            session tokens instead of building core product features. For users, the requirement to create 
+                            and remember complex passwords for yet another application resulted in "Login Fatigue" and high abandonment rates.
+                        <p class="disc mb--30">
+                            <span>Challenges:</span> The constant threat of data breaches due to weak encryption or SQL injection vulnerabilities
+                             put the brand at risk. Users demanded the convenience of "Sign in with Google/Apple," but the legacy system couldn't
+                              support it. Furthermore, the lack of adaptive security meant that suspicious login attempts often went undetected until 
+                              it was too late.
                         </p>
+
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                        </div>
+
                         <div class="project-detials-problems-wrapper">
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>1</span>
-                                    <h5 class="title">Authentication Latency & Friction</h5>
+                                    <h5 class="title">Security Vulnerabilities & Data Breaches</h5>
                                 </div>
                                 <p class="disc">
-                                    Legacy login systems were slow and prone to timeout errors, resulting in a 15% user drop-off rate during the sign-in process and a surge in abandoned user sessions during peak hours.
-                                </p>
-                            </div>
+                                    Relying on custom-built authentication logic often left gaping security holes, such as weak 
+                                    password hashing or improper session management. These vulnerabilities made the platform an 
+                                    easy target for brute-force attacks and credential stuffing, where attackers use stolen passwords 
+                                    from other breaches to hijack user accounts.                            
+                                </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>2</span>
-                                    <h5 class="title">Weak Session Visibility</h5>
+                                    <h5 class="title">High Friction & User Drop-off</h5>
                                 </div>
                                 <p class="disc">
-                                    Lack of centralized session monitoring meant the security team was blind to concurrent logins from high-risk IP addresses, making it difficult to detect account takeovers in real-time.
-                                </p>
-                            </div>
+                                    Modern users expect instant access. Forcing them to fill out lengthy registration forms and verify 
+                                    emails before accessing the app created a significant barrier to entry. This friction at the very top 
+                                    of the funnel caused potential users to abandon the sign-up process entirely, directly impacting user
+                                     acquisition costs and growth metrics.                            
+                                </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>3</span>
-                                    <h5 class="title">High Cost of Custom Integration</h5>
+                                    <h5 class="title">Maintenance & Compliance Burden</h5>
                                 </div>
                                 <p class="disc">
-                                    The absence of a standardized API forced internal developers to spend 60% of their time building bespoke login logic for every new feature instead of focusing on core business innovation.
+                                Maintaining a compliant authentication system requires constant vigilance against new threats and changing 
+                                regulations (like GDPR/CCPA). Engineering teams were bogged down by the complexity of managing password resets, 
+                                2FA implementations, and token refreshes, diverting resources away from innovation and feature development.
                                 </p>
                             </div>
                         </div>
@@ -403,6 +434,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--0">
     <div class="container">
         <div class="project-details-container">
@@ -411,23 +443,27 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Solutions</span>
-                            <h2 class="title rts-text-anime-style-1">Unified Identity Strategy</h2>
+                            <h2 class="title rts-text-anime-style-1">Universal Auth Gateway</h2>
                         </div>
                         <p class="disc">
                             <span>Strategic Execution:</span>
-                            We overcame the security gap by deploying a centralized "Authentication Orchestration & Security Layer." By utilizing JWT (JSON Web Tokens) and automated API hooks for threat intelligence, we created a self-service flow that automatically detects anomalies and applies step-up authentication triggers with zero manual intervention.
-                        </p>
+                                We eliminated the security overhead by deploying a "Universal Authentication API Layer." This system offloads
+                                 identity management to a secure infrastructure that supports Social Logins, Biometric authentication, and Magic
+                                  Links out of the box, while automatically handling threat detection and session lifecycle management.
+                            </p>
 
                         
 
-                        <div class="image-wrapper-top mb--30">
-                            <div class="single">
-                                <img src="assets/images/project/10.webp" alt="Auth API Implementation Roadmap">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center mb--30">
+                                <img src="assets/images/project/10.webp" alt="Automated Telecalling Implementation Roadmap" class="img-fluid" style="max-width:900px; width:100%; height:auto;">
                             </div>
                         </div>
                         <p class="disc">
                             <span>Results Achieved:</span>
-                            By synchronizing real-time identity data with security triggers, we achieved a 99.9% reduction in unauthorized access attempts and cut login-related support tickets by 80%. This transformation enabled the client to scale their user base with total security confidence.
+                            The implementation of the Auth API reduced sign-up time by 65%, leading to a 30% increase in new user registrations.
+                             By offloading security logic, the client eliminated account takeover incidents and freed up 20% of their engineering
+                              capacity to focus on core product revenue drivers.
                         </p>
                     </div>
                 </div>
@@ -435,16 +471,18 @@
         </div>
     </div>
 </div>
+
 <div class="rts-call-to-action-area rts-section-gap">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="call-to-action-wrapper-three">
                     <h3 class="title rts-text-anime-style-1">
-                        Secure Your Users. Simplify Your Access. Professional.
+                    Secure Login. Seamless Entry. Professional.
                     </h3>
                     <p class="disc">
-                        Book a specialized Auth API audit today to modernize your identity stack and secure your digital borders.
+                    Book a specialized Authentication Architecture audit today to secure your user data, simplify logins,
+                     and accelerate user growth. 
                     </p>
                     <a href="saas-auth-backend/public/login.html" class="rts-btn btn-primary">Get Started</a>
                 </div>

@@ -333,20 +333,24 @@
                             <h2 class="title rts-text-anime-style-1">Overview:</h2>
                         </div>
                         <p class="disc">
-                            We partnered with a major digital enterprise to architect a high-performance Real-Time Event Analytics framework. By deploying a low-latency streaming pipeline (using technologies like Kafka and Flink), we enabled the automated ingestion and processing of millions of concurrent user events, ensuring that every click, transaction, and system heartbeat is analyzed instantly to trigger proactive business responses.
-                        </p>
+                                We partnered with a high-traffic digital ecosystem to implement a cutting-edge Real-Time Event Analytics framework designed to turn raw data into instant action. By transitioning from legacy batch processing to a high-throughput streaming architecture, we empowered the business to visualize user behavior, system health, and transaction flows the millisecond they happen.
+
+
+                        </p>                        
                         <p class="disc mb--30">
-                            <span>The Objective:</span> To transition from traditional "Batch Processing" to a live, event-driven analytical ecosystem. Our focus was on implementing complex event processing (CEP), ensuring 100% data accuracy during peak traffic spikes, and providing operational teams with a sub-second latency dashboard for fraud detection and user behavior tracking.
+                            <span>The Objective:</span> To transition from reactive, historical reporting to proactive, live intelligence. Our focus was on eliminating data latency, enabling instant personalization triggers based on live user actions, and providing engineering teams with sub-second visibility into system anomalies.
+
+
                         </p>
-                        
+
                         
 
-                        <div class="image-wrapper-top">
-                            <div class="single">
-                                <img src="assets/images/project/08.webp" alt="Real-Time Live Event Stream Dashboard">
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
-                            <div class="single">
-                                <img src="assets/images/project/09.webp" alt="Event-Driven Alerting & Logic Flow">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
                         </div>
                     </div>
@@ -355,6 +359,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -363,37 +368,60 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Problem</span>
-                            <h2 class="title rts-text-anime-style-1">The Challenges</h2>
+                            <h2 class="title rts-text-anime-style-1">The Problem</h2>
                         </div>
                         <p class="disc">
-                            The client struggled with "Insight Latency" where critical user behavior data was only available 24 hours after the event. This delay led to missed opportunities for real-time personalization, slow response times to system anomalies, and a significant lag in detecting fraudulent transactions until the damage was already done.
+                            Enterprises were drowning in data but starving for insights. Traditional analytics models processed data in overnight batches, meaning decision-makers were always looking at "yesterday’s news." In a hyper-competitive digital landscape, the inability to react to customer behavior or system errors in the moment resulted in lost revenue and degraded user experiences.
+
+
                         </p>
+                        <p class="disc mb--30">
+                            <span>Challenges:</span> The lag between an event occurring and it appearing on a dashboard meant that opportunities for engagement were missed. Operational issues often compounded for hours before being detected. Furthermore, disjointed tools created data silos, where marketing, sales, and engineering teams were looking at conflicting versions of the truth.
+
+
+                        </p>
+
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                        </div>
+
                         <div class="project-detials-problems-wrapper">
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>1</span>
-                                    <h5 class="title">Processing Latency & Data Stale-ness</h5>
+                                    <h5 class="title">Latency-Induced Opportunity Costs</h5>
                                 </div>
                                 <p class="disc">
-                                    Legacy batch systems resulted in outdated reports, meaning marketing campaigns were based on day-old user behavior, leading to irrelevant messaging and a 15% drop in conversion potential.
-                                </p>
+                                    Data processed in daily batches lost its transactional value. By the time the system flagged a high-value user dropping off at checkout or a sudden spike in traffic, the customer had already left or the trend had passed. This "insight lag" prevented the implementation of dynamic pricing or instant retention offers.
+
+
+                                </p>                          
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>2</span>
-                                    <h5 class="title">Limited Anomaly Visibility</h5>
+                                    <h5 class="title">Reactive Incident Response</h5>
                                 </div>
                                 <p class="disc">
-                                    Without real-time stream monitoring, the technical team was blind to emerging patterns of system failure or cyber-attacks, identifying issues only after they impacted the entire user base.
-                                </p>
+                                    Without live monitoring, system anomalies, API failures, or UX friction points went undetected for hours until customer complaints started rolling in. This reactive approach to stability meant that minor glitches often escalated into major outages, causing significant reputational damage and financial loss.
+
+
+                                </p>                            
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>3</span>
-                                    <h5 class="title">High Cost of Manual Correlation</h5>
+                                    <h5 class="title">Fragmented Customer View</h5>
                                 </div>
                                 <p class="disc">
-                                    The absence of automated event correlation forced data scientists to spend 60% of their time manually stitching together logs from different silos instead of performing predictive modeling.
+                                    Data was scattered across various third-party tools (CRM, Google Analytics, Server Logs) that didn't talk to each other in real-time. This fragmentation made it impossible to stitch together a coherent view of the customer journey as it unfolded, leading to disjointed marketing messages and confusing support interactions.
+
+
                                 </p>
                             </div>
                         </div>
@@ -403,6 +431,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--0">
     <div class="container">
         <div class="project-details-container">
@@ -411,23 +440,27 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Solutions</span>
-                            <h2 class="title rts-text-anime-style-1">Intelligent Event Strategy</h2>
+                            <h2 class="title rts-text-anime-style-1">Event Streaming Backbone</h2>
                         </div>
                         <p class="disc">
                             <span>Strategic Execution:</span>
-                            We overcame the analytics gap by deploying a centralized "Stream Orchestration & Intelligence Layer." By utilizing automated schema validation and windowed aggregations, we created a flow that automatically detects significant "events" (like a sudden drop in checkout success) and triggers instant mitigation workflows with zero manual intervention.
+                                We closed the insight gap by deploying a "High-Velocity Event Bus." This architecture ingests, processes, and visualizes millions of events per second. We set up real-time pipelines that trigger immediate actions—such as sending a discount code the moment a cart is abandoned or alerting DevOps the second error rates spike.
+
+
                         </p>
 
                         
 
-                        <div class="image-wrapper-top mb--30">
-                            <div class="single">
-                                <img src="assets/images/project/10.webp" alt="Real-Time Analytics Implementation Roadmap">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center mb--30">
+                                <img src="assets/images/project/10.webp" alt="Automated Telecalling Implementation Roadmap" class="img-fluid" style="max-width:900px; width:100%; height:auto;">
                             </div>
                         </div>
                         <p class="disc">
                             <span>Results Achieved:</span>
-                            By synchronizing real-time event data with automated response triggers, we achieved a 95% reduction in incident response time and improved user engagement through real-time personalization by 40%. This transformation enabled the client to act at the speed of thought.
+                                The shift to stream processing reduced data latency from 24 hours to under 500 milliseconds. This immediacy allowed the client to implement live personalization, resulting in a 25% uplift in conversion rates and a 90% reduction in the Mean Time To Detect (MTTD) operational incidents.
+
+
                         </p>
                     </div>
                 </div>
@@ -435,16 +468,19 @@
         </div>
     </div>
 </div>
+
 <div class="rts-call-to-action-area rts-section-gap">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="call-to-action-wrapper-three">
                     <h3 class="title rts-text-anime-style-1">
-                        Don't Wait for Data. Act in the Moment. Professional.
+                    Analyze Instantly. Act Immediately. Professional.
                     </h3>
                     <p class="disc">
-                       Book a specialized Real-Time Event Analytics audit today to unlock instant insights and automate your operational response.
+                        Book a specialized Data Streaming audit today to eliminate data lag, visualize your business in real-time, and react before your competitors do.
+
+
                     </p>
                     <a href="saas-auth-backend/public/login.html" class="rts-btn btn-primary">Get Started</a>
                 </div>

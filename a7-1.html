@@ -333,20 +333,24 @@
                             <h2 class="title rts-text-anime-style-1">Overview:</h2>
                         </div>
                         <p class="disc">
-                            We partnered with a major fintech group to architect a high-performance Secure REST API framework. By deploying a multi-layered security gateway, we enabled the automated encryption of data payloads, granular OAuth2.0 authorization, and real-time threat mitigation across thousands of endpoints, ensuring that every data exchange—from mobile banking triggers to B2B financial transfers—is fortified against intercepted attacks and unauthorized access.
-                        </p>
+                            We partnered with a platform-based enterprise to implement a Secure REST API framework designed to standardize and protect digital communication. By transitioning from ad-hoc, direct database exposure to a managed API layer, we ensured that all internal and external data exchange is encrypted, authenticated, and strictly governed by industry standards.
+
+
+                        </p>                        
                         <p class="disc mb--30">
-                            <span>The Objective:</span> To transition from vulnerable, legacy endpoints to a hardened, cloud-native API ecosystem. Our focus was on implementing end-to-end TLS encryption, ensuring 100% adherence to OWASP API Security Top 10 standards, and providing security teams with a real-time dashboard for automated traffic analysis and breach prevention.
+                            <span>The Objective:</span> To transition from "wild west" integration patterns to a disciplined, secure API ecosystem. Our focus was on enforcing the OWASP Top 10 security protocols, implementing granular rate limiting to prevent abuse, and creating self-documenting endpoints (Swagger/OpenAPI) to accelerate developer adoption.
+
+
                         </p>
 
                         
 
-                        <div class="image-wrapper-top">
-                            <div class="single">
-                                <img src="assets/images/project/08.webp" alt="API Traffic & Security Anomaly Dashboard">
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
-                            <div class="single">
-                                <img src="assets/images/project/09.webp" alt="Automated Token Validation & Request Filtering">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
                             </div>
                         </div>
                     </div>
@@ -355,6 +359,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--65">
     <div class="container">
         <div class="project-details-container">
@@ -363,37 +368,60 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Problem</span>
-                            <h2 class="title rts-text-anime-style-1">The Challenges</h2>
+                            <h2 class="title rts-text-anime-style-1">The Problem</h2>
                         </div>
                         <p class="disc">
-                            The client faced extreme "Shadow API" risks where unmonitored endpoints led to frequent data exposure and scraping. Fragmented security protocols across microservices led to massive authentication gaps, inconsistent rate limiting, and a significant risk of Broken Object Level Authorization (BOLA) attacks that threatened sensitive customer records.
+                            As the organization’s microservices architecture grew, so did the number of API endpoints—often built without consistent security or versioning standards. This "API Sprawl" created a massive attack surface where undocumented endpoints ("Shadow APIs") exposed sensitive customer data. Without a unified gateway, managing traffic spikes and ensuring authorized access became impossible.
+
+
                         </p>
+                        <p class="disc mb--30">
+                            <span>Challenges:</span> The lack of standardized error handling and documentation made integrating new features a nightmare for frontend teams. Security gaps, such as Broken Object Level Authorization (BOLA), left user records vulnerable to scraping. Furthermore, unoptimized endpoints frequently crashed the database by allowing unrestricted heavy queries.
+
+
+                        </p>
+
+                        <div class="row justify-content-center mb--30 image-wrapper-top" style="max-width:1060px; margin:0 auto;">
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/09.webp" alt="design inconsistency example" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                            <div class="col-auto d-flex justify-content-center mx-3">
+                                <img src="assets/images/project/08.webp" alt="ui scalability challenges" class="img-fluid" style="max-height:420px; width:auto; object-fit:cover;">
+                            </div>
+                        </div>
+
                         <div class="project-detials-problems-wrapper">
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>1</span>
-                                    <h5 class="title">Bot Infiltration & DDoS Vulnerability</h5>
+                                    <h5 class="title">Shadow APIs & Data Exposure</h5>
                                 </div>
                                 <p class="disc">
-                                    Lack of automated rate limiting allowed malicious bots to overwhelm endpoints, resulting in 20% system downtime and exposing the infrastructure to brute-force credential stuffing attempts.
-                                </p>
+                                    Developers often created "temporary" endpoints for quick fixes and forgot to remove or secure them. These unmonitored backdoors became prime targets for attackers, allowing them to access sensitive datasets without triggering any alarms. The business simply didn't know these vulnerabilities existed until it was too late.
+
+
+                                </p>                          
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>2</span>
-                                    <h5 class="title">Limited Data Exposure Visibility</h5>
+                                    <h5 class="title">Lack of Rate Limiting (Abuse)</h5>
                                 </div>
                                 <p class="disc">
-                                    Legacy APIs often returned excessive data in JSON responses, leaving the technical team blind to "Leaky API" vulnerabilities where private user information was unintentionally exposed to frontend clients.
-                                </p>
+                                    Without controls on how many requests a user could make in a second, the system was vulnerable to both malicious DDoS attacks and accidental "self-inflicted" outages caused by buggy client scripts. A single partner's inefficient code could hog all system resources, slowing down the application for every other user.
+
+
+                                </p>                            
                             </div>
                             <div class="single-problems">
                                 <div class="top-title-area">
                                     <span>3</span>
-                                    <h5 class="title">High Cost of Manual Patching</h5>
+                                    <h5 class="title">Integration Friction (DX)</h5>
                                 </div>
                                 <p class="disc">
-                                    The absence of automated security scanning for API code forced the engineering team to spend 60% of their time on manual audits for multi-region deployments instead of building new product features.
+                                Internal and external developers wasted weeks trying to figure out how to consume the data because documentation was outdated or non-existent. The lack of standard response formats (JSON structures) meant that every integration required custom code, significantly slowing down the time-to-market for new features and mobile apps.
+
+
                                 </p>
                             </div>
                         </div>
@@ -403,6 +431,7 @@
         </div>
     </div>
 </div>
+
 <div class="project-details-content-area pb--0">
     <div class="container">
         <div class="project-details-container">
@@ -411,22 +440,27 @@
                     <div class="project-details-content-wrapper">
                         <div class="title-left-wrapper">
                             <span class="pre">Solutions</span>
-                            <h2 class="title rts-text-anime-style-1">Strategic API Defense</h2>
+                            <h2 class="title rts-text-anime-style-1">API Governance Shield</h2>
                         </div>
                         <p class="disc">
                             <span>Strategic Execution:</span>
-                            We overcame the vulnerability gap by deploying a centralized "API Defense & Orchestration Layer." By utilizing automated HMAC signatures for request integrity and event-driven API keys, we created a self-protecting flow that automatically detects abnormal traffic spikes and enforces IP-based blacklisting with zero manual intervention.
+                                We fortified the digital perimeter by deploying a "Managed API Gateway." This architecture centralizes authentication (using JWT/OAuth), enforces strict rate limiting, and sanitizes all incoming inputs. We also automated the generation of OpenAPI documentation, ensuring that the spec always matches the code.
+
+
                         </p>
+
                         
 
-                        <div class="image-wrapper-top mb--30">
-                            <div class="single">
-                                <img src="assets/images/project/10.webp" alt="Secure API Implementation Roadmap">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center mb--30">
+                                <img src="assets/images/project/10.webp" alt="Automated Telecalling Implementation Roadmap" class="img-fluid" style="max-width:900px; width:100%; height:auto;">
                             </div>
                         </div>
                         <p class="disc">
                             <span>Results Achieved:</span>
-                            By synchronizing real-time request data with automated security triggers, we achieved a 99.9% reduction in malicious traffic and ensured 100% compliance with PCI-DSS data transfer requirements. This transformation allowed the client to offer third-party developer access with total security confidence.
+                                The implementation secured 100% of endpoints against OWASP vulnerabilities and blocked over 50,000 malicious requests per month via the rate limiter. By standardizing the interface, developer onboarding time dropped by 60%, and the system maintained sub-100ms response times even during peak traffic.
+
+
                         </p>
                     </div>
                 </div>
@@ -434,16 +468,19 @@
         </div>
     </div>
 </div>
+
 <div class="rts-call-to-action-area rts-section-gap">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="call-to-action-wrapper-three">
                     <h3 class="title rts-text-anime-style-1">
-                        Harden Your Endpoints. Secure Your Data. Professional.
+                    Connect Securely. Build Faster. Professional.
                     </h3>
                     <p class="disc">
-                        Book a specialized API Security audit today to automate your defense layers and secure your digital ecosystem.
+                        Book a specialized API Security audit today to close your Shadow APIs, prevent data leaks, and standardize your digital ecosystem.
+
+
                     </p>
                     <a href="saas-auth-backend/public/login.html" class="rts-btn btn-primary">Get Started</a>
                 </div>
