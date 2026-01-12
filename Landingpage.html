@@ -1108,7 +1108,7 @@
 
     
     <!-- our working process area start -->
-<div class="rts-working-process-area rts-section-gap animate-on-scroll">
+<!--<div class="rts-working-process-area rts-section-gap animate-on-scroll">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -1185,9 +1185,86 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
     <!-- our working process area end -->
 
+
+    <!-- our working process area start -->
+<div class="rts-working-process-area rts-section-gap animate-on-scroll">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-center-wrapper" style="text-align: center; margin-bottom: 60px;">
+                    <span class="pre">Work Process</span>
+                    <h2 class="title rts-text-anime-style-1">Landing Page Design Process</h2>
+                    <p class="disc">
+                       A focused approach to designing high-impact landing pages that <br>
+                        capture attention, communicate value, and drive conversions.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="vertical-process-container">
+                    
+                    <div class="timeline-vertical">
+                        <div class="timeline-bar"></div>
+                        <div class="timeline-step step-1">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">01.</span> Campaign Goal & Audience Analysis
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                      Define the page goal, audience, traffic source, and primary user action.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-step step-2">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">02.</span> Content & Message Strategy
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                     Create clear, compelling content that communicates value and intent.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-step step-3">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">03.</span> Conversion-Focused Page Design
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                    Create engaging layouts with clear CTAs and action-focused user flows.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-step step-4">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">04.</span> Launch & Performance Optimization
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                   Launch, track, and optimize the landing page for higher engagement and conversions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="process-image-wrapper">
+                    <img src="assets/images/process/process-main.webp" alt="Telephony Process" style="max-width: 100%; height: auto; border-radius: 20px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- our working process area end -->
+ 
 <!-- rts pricing area start -->
     <section id="pricing" class="rts-pricing-area inner rts-section-gapBottom">
     <div class="container">
@@ -1837,3 +1914,65 @@
             });
         });
     </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const steps = document.querySelectorAll('.timeline-step');
+    const bar = document.querySelector('.timeline-bar');
+    const timeline = document.querySelector('.timeline-vertical');
+    const image = document.querySelector('.process-image-wrapper img');
+
+    if (!steps.length || !bar || !timeline || !image) return;
+
+    // Reset
+    steps.forEach(step => step.classList.remove('active'));
+    bar.style.height = '0px';
+
+    function syncTimelineToImage() {
+        const imgHeight = image.offsetHeight;
+        timeline.style.height = imgHeight + 'px';
+        return imgHeight;
+    }
+
+    // Ensure image height is ready
+    const imageHeight = image.complete
+        ? syncTimelineToImage()
+        : (image.onload = () => syncTimelineToImage());
+
+    // Animation timing
+    const moveDuration = 1200;
+    const pauseDuration = 300;
+    let index = 0;
+
+    function animate() {
+        if (index >= steps.length) {
+            // FORCE line to reach bottom of image
+            bar.style.height = timeline.offsetHeight + 'px';
+            return;
+        }
+
+        const step = steps[index];
+        const stepCenter =
+            step.offsetTop + step.offsetHeight / 2;
+
+        bar.style.height = stepCenter + 'px';
+
+        setTimeout(() => {
+            step.classList.add('active');
+            setTimeout(() => {
+                index++;
+                animate();
+            }, pauseDuration);
+        }, moveDuration);
+    }
+
+    // Start animation AFTER layout settles
+    setTimeout(animate, 300);
+
+    // Re-sync on resize
+    window.addEventListener('resize', () => {
+        syncTimelineToImage();
+        bar.style.height = timeline.offsetHeight + 'px';
+    });
+});
+</script>
