@@ -24296,3 +24296,25 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
     transition: height 1.6s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: height;
 }
+.rts-feature-area.rts-section-gapBottom {
+    padding-bottom: 5px !important;
+}
+
+/* Reduce gap above & below Technologies section */
+.rts-facilities-area.rts-section-gap {
+    padding-top: 30px !important;
+    padding-bottom: 100px !important;
+}
+
+/* Reduce space above Services section */
+.rts-service-area-four.rts-section-gap {
+    padding-top: 80px !important;
+}
+
+/* Hide video play icon & overlay on all pages */
+.vedio-icone,
+.video-play-button,
+.video-overlay {
+    display: none !important;
+}
+
