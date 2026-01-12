@@ -52,15 +52,8 @@
                             </ul>
                             </div> -->
                                 </li>
-                                <li class="main-nav has-dropdown">
-                                    <a href="about.html">About</a>
-                                        <ul class="submenu mega-menu-item with-list parent-nav">
-                                            <li>
-                                                <a href="team.html">            
-                                                    Our Team
-                                                </a>
-                                            </li>
-                                        </ul>
+                                <li class="main-nav">
+                                    <a href="why-choose-us.html">About</a>
                                 </li>
                                 <li class="main-nav has-dropdown mega-menu">
                                     <a href="service.html">Services</a>
@@ -1045,7 +1038,7 @@
 
     
     <!-- our working process area start -->
-<div class="rts-working-process-area rts-section-gap animate-on-scroll">
+<!--<div class="rts-working-process-area rts-section-gap animate-on-scroll">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -1064,7 +1057,7 @@
             <div class="col-lg-6">
                 <div class="vertical-process-container">
                     
-                    <div class="process-step">
+                    <div class="timeline-vertical">
                         <div class="dot"></div>
                         <div class="content-wrapper">
                             <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
@@ -1125,8 +1118,88 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
     <!-- our working process area end -->
+
+<!-- our working process area start -->
+<div class="rts-working-process-area rts-section-gap animate-on-scroll">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-center-wrapper" style="text-align: center; margin-bottom: 60px;">
+                    <span class="pre">Work Process</span>
+                    <h2 class="title rts-text-anime-style-1">App Analytics & Deployment Process</h2>
+                    <p class="disc">
+                     A focused approach to tracking app performance, user insights, <br>
+                        and deploying updates with reliability and speed.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="vertical-process-container">
+                    
+                    <div class="timeline-vertical">
+                        <div class="timeline-bar"></div>
+                        <div class="timeline-step step-1">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">01.</span> Analytics Setup & Metrics Definition
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                    Define key performance indicators, user events,
+                                and tracking requirements across the app.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-step step-2">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">02.</span> Data Collection & Monitoring
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                     Collect real-time data on usage, crashes,
+                                and performance to monitor app health.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-step step-3">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">03.</span> Deployment Pipeline Configuration
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                   Configure automated build and release pipelines
+                                for consistent and faster deployments.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-step step-4">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">04.</span> Release, Validation & Optimization
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                  Deploy updates, validate analytics results,
+                                and optimize performance based on insights.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="process-image-wrapper">
+                    <img src="assets/images/process/process-main.webp" alt="Telephony Process" style="max-width: 100%; height: auto; border-radius: 20px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- our working process area end -->
 
     <!-- rts pricing area start -->
     <section id="pricing" class="rts-pricing-area inner rts-section-gapBottom">
@@ -1606,11 +1679,8 @@ and reliable deployments across environments.</p>
             </li>
 
             <!-- About -->
-            <li class="has-droupdown">
-                <a href="#" class="main">About</a>
-                <ul class="submenu mm-collapse">
-                    <li><a href="team.html">Our Team</a></li>                
-                </ul>
+            <li>
+                <a href="why-choose-us.html" class="main">About</a>
             </li>
 
             <!-- Services -->
@@ -1775,3 +1845,65 @@ and reliable deployments across environments.</p>
             });
         });
     </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const steps = document.querySelectorAll('.timeline-step');
+    const bar = document.querySelector('.timeline-bar');
+    const timeline = document.querySelector('.timeline-vertical');
+    const image = document.querySelector('.process-image-wrapper img');
+
+    if (!steps.length || !bar || !timeline || !image) return;
+
+    // Reset
+    steps.forEach(step => step.classList.remove('active'));
+    bar.style.height = '0px';
+
+    function syncTimelineToImage() {
+        const imgHeight = image.offsetHeight;
+        timeline.style.height = imgHeight + 'px';
+        return imgHeight;
+    }
+
+    // Ensure image height is ready
+    const imageHeight = image.complete
+        ? syncTimelineToImage()
+        : (image.onload = () => syncTimelineToImage());
+
+    // Animation timing
+    const moveDuration = 1200;
+    const pauseDuration = 300;
+    let index = 0;
+
+    function animate() {
+        if (index >= steps.length) {
+            // FORCE line to reach bottom of image
+            bar.style.height = timeline.offsetHeight + 'px';
+            return;
+        }
+
+        const step = steps[index];
+        const stepCenter =
+            step.offsetTop + step.offsetHeight / 2;
+
+        bar.style.height = stepCenter + 'px';
+
+        setTimeout(() => {
+            step.classList.add('active');
+            setTimeout(() => {
+                index++;
+                animate();
+            }, pauseDuration);
+        }, moveDuration);
+    }
+
+    // Start animation AFTER layout settles
+    setTimeout(animate, 300);
+
+    // Re-sync on resize
+    window.addEventListener('resize', () => {
+        syncTimelineToImage();
+        bar.style.height = timeline.offsetHeight + 'px';
+    });
+});
+</script>

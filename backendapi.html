@@ -52,15 +52,8 @@
                             </ul>
                             </div> -->
                                 </li>
-                                <li class="main-nav has-dropdown">
-                                    <a href="about.html">About</a>
-                                        <ul class="submenu mega-menu-item with-list parent-nav">
-                                            <li>
-                                                <a href="team.html">            
-                                                    Our Team
-                                                </a>
-                                            </li>
-                                        </ul>
+                                <li class="main-nav">
+                                    <a href="why-choose-us.html">About</a>
                                 </li>
                                 <li class="main-nav has-dropdown mega-menu">
                                     <a href="service.html">Services</a>
@@ -947,7 +940,7 @@
 
     
     <!-- our working process area start -->
-<div class="rts-working-process-area rts-section-gap animate-on-scroll">
+<!--<div class="rts-working-process-area rts-section-gap animate-on-scroll">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -1027,8 +1020,88 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
     <!-- our working process area end -->
+
+<!-- our working process area start -->
+<div class="rts-working-process-area rts-section-gap animate-on-scroll">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-center-wrapper" style="text-align: center; margin-bottom: 60px;">
+                    <span class="pre">Work Process</span>
+                    <h2 class="title rts-text-anime-style-1">Backend & API Integration Process</h2>
+                    <p class="disc">
+                     A streamlined approach to building secure backends and scalable APIs <br>
+                        that enable reliable system communication.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="vertical-process-container">
+                    
+                    <div class="timeline-vertical">
+                        <div class="timeline-bar"></div>
+                        <div class="timeline-step step-1">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">01.</span> Requirements & System Analysis
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                    Identify data flows, system dependencies, and integration requirements
+                                across applications and services.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-step step-2">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">02.</span> API Design & Architecture
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                     Design secure REST or GraphQL APIs with clear contracts,
+                                authentication, and versioning.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-step step-3">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">03.</span> Backend Development & Integration
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                    Develop backend services and integrate databases,
+                                third-party APIs, and internal systems.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-step step-4">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">04.</span> Testing, Deployment & Monitoring
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                  Test APIs, deploy services, and monitor performance,
+                                security, and scalability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="process-image-wrapper">
+                    <img src="assets/images/process/process-main.webp" alt="Telephony Process" style="max-width: 100%; height: auto; border-radius: 20px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- our working process area end -->
 
     <!-- rts pricing area start -->
     <section id="pricing" class="rts-pricing-area inner rts-section-gapBottom">
@@ -1511,12 +1584,9 @@
             </li>
 
             <!-- About -->
-            <li class="has-droupdown">
-                <a href="#" class="main">About</a>
-                <ul class="submenu mm-collapse">
-                    <li><a href="team.html">Our Team</a></li>                
-                </ul>
-            </li>
+            <li>
+                    <a href="why-choose-us.html" class="main">About</a>
+                </li>
 
             <!-- Services -->
             <li class="has-droupdown">
@@ -1680,3 +1750,65 @@
             });
         });
     </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const steps = document.querySelectorAll('.timeline-step');
+    const bar = document.querySelector('.timeline-bar');
+    const timeline = document.querySelector('.timeline-vertical');
+    const image = document.querySelector('.process-image-wrapper img');
+
+    if (!steps.length || !bar || !timeline || !image) return;
+
+    // Reset
+    steps.forEach(step => step.classList.remove('active'));
+    bar.style.height = '0px';
+
+    function syncTimelineToImage() {
+        const imgHeight = image.offsetHeight;
+        timeline.style.height = imgHeight + 'px';
+        return imgHeight;
+    }
+
+    // Ensure image height is ready
+    const imageHeight = image.complete
+        ? syncTimelineToImage()
+        : (image.onload = () => syncTimelineToImage());
+
+    // Animation timing
+    const moveDuration = 1200;
+    const pauseDuration = 300;
+    let index = 0;
+
+    function animate() {
+        if (index >= steps.length) {
+            // FORCE line to reach bottom of image
+            bar.style.height = timeline.offsetHeight + 'px';
+            return;
+        }
+
+        const step = steps[index];
+        const stepCenter =
+            step.offsetTop + step.offsetHeight / 2;
+
+        bar.style.height = stepCenter + 'px';
+
+        setTimeout(() => {
+            step.classList.add('active');
+            setTimeout(() => {
+                index++;
+                animate();
+            }, pauseDuration);
+        }, moveDuration);
+    }
+
+    // Start animation AFTER layout settles
+    setTimeout(animate, 300);
+
+    // Re-sync on resize
+    window.addEventListener('resize', () => {
+        syncTimelineToImage();
+        bar.style.height = timeline.offsetHeight + 'px';
+    });
+});
+</script>

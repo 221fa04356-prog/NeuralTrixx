@@ -5403,7 +5403,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .rts-section-gapBottom {
-  padding-bottom: 120px;
+  padding-bottom: 80px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rts-section-gapBottom {
@@ -5417,7 +5417,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .rts-section-gapTop {
-  padding-top: 120px;
+  padding-top: 60px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rts-section-gapTop {
@@ -24248,7 +24248,6 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
     margin-bottom: 0;
 }
 
-
 /* ================================
    RESPONSIVE FIX
 ================================ */
@@ -24317,4 +24316,3 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 .video-overlay {
     display: none !important;
 }
-
