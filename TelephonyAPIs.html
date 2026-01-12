@@ -761,51 +761,47 @@
             <div class="col-lg-6">
                 <div class="vertical-process-container">
                     
-                    <div class="process-step">
-                        <div class="dot"></div>
-                        <div class="content-wrapper">
-                            <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
-                                <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">01.</span> API & Logic Integration
-                            </h5>
-                            <p class="disc" style="font-size: 14px; color: #666;">
-                                Seamlessly connect our Telephony APIs with your existing CRM to sync lead data and call triggers.
-                            </p>
+                    <div class="timeline-vertical">
+                        <div class="timeline-bar"></div>
+                        <div class="timeline-step step-1">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">01.</span> API & Logic Integration
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                    Seamlessly connect our Telephony APIs with your existing CRM to sync lead data.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="process-step">
-                        <div class="dot"></div>
-                        <div class="content-wrapper">
-                            <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
-                                <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">02.</span> Call Flow Architecting
-                            </h5>
-                            <p class="disc" style="font-size: 14px; color: #666;">
-                                Map out IVR menus and smart routing logic to ensure every caller reaches the right destination.
-                            </p>
+                        <div class="timeline-step step-2">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">02.</span> Call Flow Architecting
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                    Map out IVR menus and smart routing logic to ensure every caller reaches the right.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="process-step">
-                        <div class="dot"></div>
-                        <div class="content-wrapper">
-                            <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
-                                <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">03.</span> Bot Training & NLP Tuning
-                            </h5>
-                            <p class="disc" style="font-size: 14px; color: #666;">
-                                Configure Voice Bots with Natural Language Processing to handle FAQs and automated outbound calling.
-                            </p>
+                        <div class="timeline-step step-3">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">03.</span> Bot Training & NLP Tuning
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                    Configure Voice Bots with Natural Language Processing to handle FAQs.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="process-step" style="margin-bottom: 0;">
-                        <div class="dot"></div>
-                        <div class="content-wrapper">
-                            <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
-                                <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">04.</span> Real-time Dashboard Launch
-                            </h5>
-                            <p class="disc" style="font-size: 14px; color: #666;">
-                                Go live with a unified dashboard for call recording, sentiment analysis, and agent performance tracking.
-                            </p>
+                        <div class="timeline-step step-4">
+                            <div class="process-step-content">
+                                <h5 class="title" style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+                                    <span style="color: #4A6CF7; margin-right: 5px; font-weight: 600;">04.</span> Real-time Dashboard Launch
+                                </h5>
+                                <p class="disc" style="font-size: 14px; color: #666;">
+                                    Go live with a unified dashboard for call recording, sentiment analysis.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -1402,7 +1398,7 @@
     <script defer src="assets/js/plugins/swiper.js"></script>
     <script defer src="assets/js/main.js"></script>
 
-                <script>
+              <!--  <script>
 document.addEventListener("DOMContentLoaded", function () {
   const projects = document.querySelectorAll(".project-block-four");
   let currentIndex = 0;
@@ -1439,26 +1435,71 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+</script>-->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const steps = document.querySelectorAll('.timeline-step');
+    const bar = document.querySelector('.timeline-bar');
+    const timeline = document.querySelector('.timeline-vertical');
+    const image = document.querySelector('.process-image-wrapper img');
+
+    if (!steps.length || !bar || !timeline || !image) return;
+
+    // Reset
+    steps.forEach(step => step.classList.remove('active'));
+    bar.style.height = '0px';
+
+    function syncTimelineToImage() {
+        const imgHeight = image.offsetHeight;
+        timeline.style.height = imgHeight + 'px';
+        return imgHeight;
+    }
+
+    // Ensure image height is ready
+    const imageHeight = image.complete
+        ? syncTimelineToImage()
+        : (image.onload = () => syncTimelineToImage());
+
+    // Animation timing
+    const moveDuration = 1200;
+    const pauseDuration = 300;
+    let index = 0;
+
+    function animate() {
+        if (index >= steps.length) {
+            // FORCE line to reach bottom of image
+            bar.style.height = timeline.offsetHeight + 'px';
+            return;
+        }
+
+        const step = steps[index];
+        const stepCenter =
+            step.offsetTop + step.offsetHeight / 2;
+
+        bar.style.height = stepCenter + 'px';
+
+        setTimeout(() => {
+            step.classList.add('active');
+            setTimeout(() => {
+                index++;
+                animate();
+            }, pauseDuration);
+        }, moveDuration);
+    }
+
+    // Start animation AFTER layout settles
+    setTimeout(animate, 300);
+
+    // Re-sync on resize
+    window.addEventListener('resize', () => {
+        syncTimelineToImage();
+        bar.style.height = timeline.offsetHeight + 'px';
+    });
+});
 </script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active-animation');
-                } else {
-                    // Remove to ensure it resets when scrolling back from first section
-                    entry.target.classList.remove('active-animation');
-                }
-            });
-        }, { threshold: 0.3 });
 
-        document.querySelectorAll('.animate-on-scroll').forEach(section => {
-            observer.observe(section);
-        });
-    });
-    </script>
+<!-- Animation on scroll removed: work process section is now static, no looping or animation. -->
 </body>
 
 </html>
