@@ -1475,6 +1475,64 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const projects = document.querySelectorAll(".project-block-four");
+        let currentIndex = 0;
+
+        function showProject(index) {
+            projects.forEach((item, i) => {
+            item.classList.toggle("active", i === index);
+            });
+        }
+
+        // Initial state
+        showProject(currentIndex);
+
+        // OPTIONAL: keyboard navigation
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowRight") {
+            currentIndex = (currentIndex + 1) % projects.length;
+            showProject(currentIndex);
+            }
+            if (e.key === "ArrowLeft") {
+            currentIndex =
+                (currentIndex - 1 + projects.length) % projects.length;
+            showProject(currentIndex);
+            }
+        });
+
+        // Click on rotated titles
+        projects.forEach((project, index) => {
+            project
+            .querySelector(".content-rotate")
+            .addEventListener("click", () => {
+                currentIndex = index;
+                showProject(currentIndex);
+            });
+        });
+        });
+</script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active-animation');
+                    } else {
+                        // Remove to ensure it resets when scrolling back from first section
+                        entry.target.classList.remove('active-animation');
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 
 </html>
